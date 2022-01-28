@@ -1,11 +1,27 @@
 body {
   margin: 0;
-  font-family: 'Tenor Sans', sans-serif;
+  font-family: 'Fanwood Text', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Tenor Sans', sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.home-nav-link {
+  text-decoration: none;
+}
+#home-footer-text {
+  font-size: 10px;
+}
+
+#home-footer-link {
+  text-decoration: none;
+  color: black;
 }

@@ -5,6 +5,7 @@ import About from './views/About';
 import Contact from './views/Contact';
 import Home from './views/Home';
 import Portfolio from './views/Portfolio';
+import DropdownMenu from './components/DropdownMenu';
 
 
 function App() {
@@ -12,10 +13,11 @@ function App() {
     <Router>
       <Container>
         <Routes>
-            <Route path='/' exact element={
-              <Zoom>
-                <Home />
-              </Zoom>
+            <Route path='/' exact element=
+            {
+                <Home>
+                  <DropdownMenu />
+                </Home>
             } />
           <Route path='/about' exact element={<About />} />
           <Route path='/portfolio' exact element={<Portfolio />} />
