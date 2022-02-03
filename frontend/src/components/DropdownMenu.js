@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const DropdownMenu = () => {
+const DropdownMenu = ({setIsShown}) => {
     return (
-        <Navbar bg="light" expand="lg" collapseOnSelect>
+        <Navbar style={{ width: '150px' }} bg="light" expand="lg" collapseOnSelect onMouseLeave={() => setIsShown(false)}>
             <Container>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">

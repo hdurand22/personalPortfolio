@@ -1,3 +1,7 @@
+* {
+  margin-top: 0px;
+}
+
 body {
   margin: 0;
   font-family: 'Fanwood Text', serif;
@@ -14,9 +18,30 @@ code {
     monospace;
 }
 
+#home-screen {
+
+}
+
+#home-screen-video {
+  position: fixed;
+  width: 100%;
+  /* left: 50%;
+  top: 50%; */
+  height: 100%;
+  object-fit: cover;
+  /* transform: translate(-50%, -50%); */
+  z-index: -1;
+}
+
+#main-hover-menu {
+  width: 300px;
+  z-index: 5;
+}
+
 .home-nav-link {
   text-decoration: none;
 }
+
 #home-footer-text {
   font-size: 10px;
 }

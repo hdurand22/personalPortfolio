@@ -1,6 +1,5 @@
 import { Container } from 'react-bootstrap';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Zoom from 'react-reveal';
 import About from './views/About';
 import Contact from './views/Contact';
 import Home from './views/Home';
