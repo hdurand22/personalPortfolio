@@ -13,8 +13,8 @@ const Home = () => {
             <Fade
                 left
                 appear={true}
-                duration={2500}
-                timeout={2500}
+                duration={1250}
+                timeout={1250}
             >
                 <video autoPlay muted loop id='home-screen-video' >
                     <source src={CassetteTape} type='video/mp4' />
@@ -24,7 +24,7 @@ const Home = () => {
                 <Fade
                     left
                     appear={true}
-                    delay={2500}
+                    delay={1250}
                     duration={1000}
                     timeout={1000}
                 >
@@ -33,7 +33,7 @@ const Home = () => {
                 <Fade
                     left
                     appear={true}
-                    delay={2500}
+                    delay={1250}
                     duration={1000}
                     timeout={1000}
                 >
