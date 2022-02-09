@@ -10,7 +10,7 @@ import DropdownMenu from './components/DropdownMenu';
 function App() {
   return (
     <Router>
-      <Container>
+      <Container id='app-container'>
         <Routes>
             <Route path='/' exact element=
             {

@@ -17,7 +17,7 @@ const Home = () => {
                 timeout={1250}
             >
                 <video autoPlay muted loop id='home-screen-video' >
-                    <source src={CassetteTape} type='video/mp4' />
+                    <source id='video-source' src={CassetteTape} type='video/mp4' />
                 </video>
             </Fade>
             <TransitionGroup id='home-screen'>

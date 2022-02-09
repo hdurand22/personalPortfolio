@@ -22,14 +22,13 @@ const Heading = () => {
     }, [isShown]);
 
     return (
-        <>
-            <header id='main-hover-menu'>
+        <header id='main-hover-menu'>
                 <h1 id='de-header-text' onMouseEnter={() => setIsShown(!isShown)}>durand enterprises</h1>
                 {isShown &&
                     <DropdownMenu setIsShown={setIsShown} />
                 }
-            </header>
-        </>
+                <h3 id='home-subtitle'>Custom Web Development</h3>
+        </header>
     );
 };
 

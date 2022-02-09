@@ -1,5 +1,6 @@
 * {
   margin-top: 0px;
+  background-color: black;
 }
 
 body {
@@ -24,6 +25,7 @@ code {
   justify-content: right;
   align-items: flex-end;
   height: 226px;
+  background-color: transparent;
 }
 
 #home-screen-video {
@@ -31,15 +33,21 @@ code {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  z-index: 0;
+}
+
+#home-subtitle {
+  background-color: transparent;
 }
 
 #main-hover-menu {
   width: 300px;
+  background-color: transparent;
 }
 
 #de-header-text {
   margin-bottom: 15px;
+  background-color: transparent;
 }
 
 .home-nav-link {
@@ -47,42 +55,78 @@ code {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  background-color: transparent;
 }
 
-/* #nav-link-1 {
+ol {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  width: 40vw;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
 }
 
-#nav-link-2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+a:-webkit-any-link {
+  text-decoration: none;
 }
-
-#nav-link-3 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-} */
 
 #home-footer {
   justify-content: right;
   width: 300px;
+  padding-top: 10px;
+  background-color: transparent;
 }
 
 #home-footer-text {
   font-size: 10px;
+  background-color: transparent;
 }
 
 #home-footer-link {
   text-decoration: none;
   color: black;
+  background-color: transparent;
 }
 
 #dropdown-nav {
   text-align: left; 
   padding: 0px 10px;
   margin-top: 0px;
+  background-color: transparent;
+}
+
+.navbar-collapse.collapse {
+  background-color: transparent;
+}
+
+.me-auto.navbar-nav {
+  background-color: transparent;
+}
+
+.nav-option {
+  background-color: transparent;
+}
+
+#contact-page {
+  background-color: black;
+}
+
+.react-reveal {
+  background-color: transparent;
+}
+
+#app-container {
+  background-color: transparent;
+}
+
+#root {
+  background-color: transparent;
+}
+
+#video-source {
+  background-color: transparent;
+}
+
+#dropdown-link-container {
+  background-color: transparent;
 }
