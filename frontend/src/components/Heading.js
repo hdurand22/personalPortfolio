@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import DropdownMenu from './DropdownMenu';
 
+
 const Heading = () => {
-    const dropdownRef = useRef(null)
     const [isShown, setIsShown] = useState(false);
 
     useEffect(() => {

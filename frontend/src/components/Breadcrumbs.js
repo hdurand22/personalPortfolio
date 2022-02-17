@@ -1,25 +1,53 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem } from 'react-bootstrap';
-import { useLocation } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 const Breadcrumbs = () => {
-    // Get the active page from the URL
-    const location = useLocation();
-    const path = location.pathname;
+    // // Get the active page from the URL
+    // const location = useLocation();
+    // const path = location.pathname;
     
     return (
         <Breadcrumb id='breadcrumb-container'>
-            <BreadcrumbItem href='/' className='crumb'>
-                <h3>Home</h3>
+            <BreadcrumbItem className='crumb'>
+                <Link 
+                    to='home'
+                    activeClass='active'
+                    spy={true}
+                    smooth={true}
+                >
+                    <h3>Home</h3>
+                </Link>
             </BreadcrumbItem>
-            <BreadcrumbItem href='/about' active={path === '/about' ? true : false}>
+            <BreadcrumbItem>
+                <Link 
+                to='about'
+                activeClass='active'
+                spy={true}
+                smooth={true}
+            >
                 <h3>About Me</h3>
+            </Link>
             </BreadcrumbItem>
-            <BreadcrumbItem href='/portfolio' active={path === '/portfolio' ? true : false}>
-                <h3>My Work</h3>
+            <BreadcrumbItem>
+                <Link 
+                    to='portfolio'
+                    activeClass='active'
+                    spy={true}
+                    smooth={true}
+                >
+                    <h3>My Work</h3>
+                </Link>
             </BreadcrumbItem>
-            <BreadcrumbItem href='/contact' active={path === '/contact' ? true : false}>
-                <h3 >Contact</h3>
+            <BreadcrumbItem>
+                <Link 
+                    to='contact'
+                    activeClass='active'
+                    spy={true}
+                    smooth={true}
+                >
+                    <h3 >Contact</h3>
+                </Link>
             </BreadcrumbItem>
         </Breadcrumb>
     )

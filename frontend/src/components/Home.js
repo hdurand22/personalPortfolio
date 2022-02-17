@@ -2,12 +2,12 @@ import React from 'react';
 import { Fade } from 'react-reveal';
 import { TransitionGroup } from 'react-transition-group';
 import CassetteTape from '../assets/Cassette_Tape.mp4'
-import Heading from '../components/Heading';
-import { VideoLink } from '../components/VideoLink';
+import Heading from './Heading';
+import { VideoLink } from './VideoLink';
 
 
 const Home = () => {
-    
+
     return (
         <>
             <Fade

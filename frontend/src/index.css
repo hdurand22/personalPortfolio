@@ -107,7 +107,7 @@ a:-webkit-any-link {
   background-color: transparent;
 }
 
-#contact-page {
+#contact {
   background-color: black;
 }
 
@@ -129,4 +129,17 @@ a:-webkit-any-link {
 
 #dropdown-link-container {
   background-color: transparent;
+}
+
+#about {
+  background-color: #2e2d2d;
+  color: #e0e0e0;
+}
+#portfolio {
+  background-color: #2e2d2d;
+  color: #e0e0e0;
+}
+#contact {
+  background-color: #2e2d2d;
+  color: #e0e0e0;
 }

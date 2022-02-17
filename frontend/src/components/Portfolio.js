@@ -1,12 +1,12 @@
 import React from 'react';
-import Breadcrumbs from '../components/Breadcrumbs';
+import Breadcrumbs from './Breadcrumbs';
 
 const Portfolio = () => {
   return (
-    <>
+    <div id='portfolio'>
         <h1>My Work</h1>
         <Breadcrumbs />
-    </>
+    </div>
   )
 };
 
