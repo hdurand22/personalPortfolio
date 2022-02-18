@@ -19,6 +19,12 @@ code {
     monospace;
 }
 
+.main-page {
+  width: 100%;
+  height: 100%;
+  background: #253237;
+}
+
 #home-screen {
   display: flex;
   flex-direction: column;

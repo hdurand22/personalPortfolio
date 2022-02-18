@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -9,40 +10,25 @@ import Heading from './components/Heading';
 
 
 function App() {
-  
+  const parallax = useRef();
+
   return (
-    <Parallax pages={5} style={{ top: '0', left: '0'}}>
-      <ParallaxLayer 
-        offset={0}
-        speed={2.5}
-      >
-        <Home>
-          <Heading />
-        </Home>
-      </ParallaxLayer>
-      {/* <ParallaxLayer
-        offset={1}
-        speed={2}
-        style={{ backgroundColor: '#2e2d2d'}} /> */}
-      <ParallaxLayer
-        offset={1}
-        speed={0.5}
-      >
-        <About />   
-      </ParallaxLayer>
-      <ParallaxLayer
-        offset={2}
-        speed={0.5}
-      >
-        <Portfolio />
-      </ParallaxLayer>
-      <ParallaxLayer
-        offset={3}
-        speed={2.5}
-      >
-        <Contact />
-      </ParallaxLayer>
-    </Parallax>
+    <div className='main-page'>
+      <Parallax ref={parallax} pages={4}>
+        <ParallaxLayer offset={0}>
+          <Home />
+        </ParallaxLayer>
+        <ParallaxLayer offset={1}>
+          <About />
+        </ParallaxLayer>
+        <ParallaxLayer offset={2}>
+          <Portfolio />
+        </ParallaxLayer>
+        <ParallaxLayer offset={3}>
+          <Contact />
+        </ParallaxLayer>
+      </Parallax>
+    </div>
   );
 }
 
