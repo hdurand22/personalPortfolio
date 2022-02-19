@@ -1,19 +1,12 @@
+import { ParallaxLayer } from '@react-spring/parallax';
 import React from 'react';
-import Breadcrumbs from './Breadcrumbs';
-import { Slide } from 'react-reveal';
 
 const Contact = () => {
   return (
       <div id='contact'>
-        <Slide 
-          bottom
-          big
-          duration={1000}
-        >
+        <ParallaxLayer offset={3} speed={0.8}>
           <h1>Contact</h1>
-          {/* <Breadcrumbs /> */}
-        </Slide>
-
+        </ParallaxLayer>
       </div>
   )
 };

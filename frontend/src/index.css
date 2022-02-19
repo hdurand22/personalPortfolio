@@ -25,6 +25,24 @@ code {
   background: #253237;
 }
 
+#breadcrumb-container {
+  color: whitesmoke;
+  background-color: transparent;
+  padding: 10px, 0px;
+}
+
+.breadcrumb {
+  background-color: transparent;
+}
+
+.breadcrumb-item {
+  background-color: transparent;
+}
+
+.breadcrumb-item h3 {
+  /* background-color: transparent; */
+}
+
 #home-screen {
   display: flex;
   flex-direction: column;
@@ -148,4 +166,8 @@ a:-webkit-any-link {
 #contact {
   background-color: #2e2d2d;
   color: #e0e0e0;
+}
+
+#nav-parallax-layer {
+  background-color: transparent;
 }

@@ -10,7 +10,7 @@ import { VideoLink } from './VideoLink';
 const Home = () => {
 
     return (
-        <>
+        <div id='home'>
             <Fade
                 left
                 appear={true}
@@ -41,7 +41,7 @@ const Home = () => {
                     <VideoLink />
                 </Fade>
             </TransitionGroup>
-        </>
+        </div>
     )
 
 
