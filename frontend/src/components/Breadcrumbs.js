@@ -7,22 +7,21 @@ const Breadcrumbs = () => {
     // // Get the active page from the URL
     // const location = useLocation();
     // const path = location.pathname;
-    
+
     return (
-        <ParallaxLayer sticky={{start: 1.05}} id='nav-parallax-layer'>
-            <Breadcrumb id='breadcrumb-container'>
-                <BreadcrumbItem linkAs='h3'>
-                    <Link 
-                        to='home'
-                        activeClass='active'
-                        spy={true}
-                        smooth={true}
-                    >
-                        Home
-                    </Link>
-                </BreadcrumbItem>
-                <BreadcrumbItem linkAs='h3'>
-                    <Link 
+        <Breadcrumb id='breadcrumb-container'>
+            <BreadcrumbItem linkAs='h3'>
+                <Link
+                    to='home'
+                    activeClass='active'
+                    spy={true}
+                    smooth={true}
+                >
+                    Home
+                </Link>
+            </BreadcrumbItem>
+            <BreadcrumbItem linkAs='h3'>
+                <Link
                     to='about'
                     activeClass='active'
                     spy={true}
@@ -30,29 +29,28 @@ const Breadcrumbs = () => {
                 >
                     About Me
                 </Link>
-                </BreadcrumbItem>
-                <BreadcrumbItem linkAs='h3'>
-                    <Link 
-                        to='portfolio'
-                        activeClass='active'
-                        spy={true}
-                        smooth={true}
-                    >
-                        My Work
-                    </Link>
-                </BreadcrumbItem>
-                <BreadcrumbItem linkAs='h3'>
-                    <Link 
-                        to='contact'
-                        activeClass='active'
-                        spy={true}
-                        smooth={true}
-                    >
-                        Contact
-                    </Link>
-                </BreadcrumbItem>
-            </Breadcrumb>
-        </ParallaxLayer>
+            </BreadcrumbItem>
+            <BreadcrumbItem linkAs='h3'>
+                <Link
+                    to='portfolio'
+                    activeClass='active'
+                    spy={true}
+                    smooth={true}
+                >
+                    My Work
+                </Link>
+            </BreadcrumbItem>
+            <BreadcrumbItem linkAs='h3'>
+                <Link
+                    to='contact'
+                    activeClass='active'
+                    spy={true}
+                    smooth={true}
+                >
+                    Contact
+                </Link>
+            </BreadcrumbItem>
+        </Breadcrumb>
     )
 };
 

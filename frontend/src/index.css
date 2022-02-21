@@ -156,18 +156,28 @@ a:-webkit-any-link {
 }
 
 #about {
-  background-color: #2e2d2d;
+  background-color: transparent;
   color: #e0e0e0;
+  margin: 15px;
+  padding: 5px;
 }
 #portfolio {
-  background-color: #2e2d2d;
+  background-color: transparent;
   color: #e0e0e0;
+  margin: 15px;
+  padding: 5px;
 }
 #contact {
-  background-color: #2e2d2d;
+  background-color: transparent;
   color: #e0e0e0;
+  margin: 15px;
+  padding: 5px;
 }
 
 #nav-parallax-layer {
   background-color: transparent;
+  display: flex;
+  margin: 20px;
+  padding: 25px;
+  justify-content: flex-start;
 }
