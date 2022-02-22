@@ -1,6 +1,7 @@
 * {
   margin-top: 0px;
-  background-color: black;
+  background-color: #F2F5F4;
+  color: #424242;
 }
 
 body {
@@ -22,11 +23,10 @@ code {
 .main-page {
   width: 100%;
   height: 100%;
-  background: #253237;
 }
 
 #breadcrumb-container {
-  color: whitesmoke;
+  color: #424242;
   background-color: transparent;
   padding: 10px, 0px;
 }
@@ -39,17 +39,24 @@ code {
   background-color: transparent;
 }
 
-.breadcrumb-item h3 {
-  /* background-color: transparent; */
-}
-
 #home-screen {
   display: flex;
   flex-direction: column;
   justify-content: right;
-  align-items: flex-end;
-  height: 226px;
-  background-color: transparent;
+  align-items: flex-start;
+  height: auto;
+  padding: 10px;
+}
+
+.image-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#splash-boombox {
+  height: 600px;
+  width: auto;
 }
 
 #home-screen-video {
@@ -64,13 +71,13 @@ code {
   background-color: transparent;
 }
 
-#main-hover-menu {
-  width: 300px;
+#de-header-text {
+  margin-bottom: 15px;
   background-color: transparent;
 }
 
-#de-header-text {
-  margin-bottom: 15px;
+#main-hover-menu {
+  width: 450px;
   background-color: transparent;
 }
 
@@ -108,7 +115,6 @@ a:-webkit-any-link {
 
 #home-footer-link {
   text-decoration: none;
-  color: black;
   background-color: transparent;
 }
 
@@ -132,7 +138,7 @@ a:-webkit-any-link {
 }
 
 #contact {
-  background-color: black;
+
 }
 
 .react-reveal {
@@ -155,24 +161,23 @@ a:-webkit-any-link {
   background-color: transparent;
 }
 
-#about {
+.section-header {
   background-color: transparent;
-  color: #e0e0e0;
   margin: 15px;
   padding: 5px;
 }
-#portfolio {
+
+/* #portfolio {
   background-color: transparent;
-  color: #e0e0e0;
   margin: 15px;
   padding: 5px;
 }
+
 #contact {
   background-color: transparent;
-  color: #e0e0e0;
   margin: 15px;
   padding: 5px;
-}
+} */
 
 #nav-parallax-layer {
   background-color: transparent;

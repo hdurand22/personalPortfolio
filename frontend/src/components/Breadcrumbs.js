@@ -1,54 +1,22 @@
-import { ParallaxLayer } from '@react-spring/parallax';
-import React from 'react';
+import React, { useRef } from 'react';
 import { Breadcrumb, BreadcrumbItem } from 'react-bootstrap';
-import { Link } from 'react-scroll';
 
-const Breadcrumbs = () => {
-    // // Get the active page from the URL
-    // const location = useLocation();
-    // const path = location.pathname;
+const Breadcrumbs = ({ setIsShown, parallax }) => {
+    const ref = useRef(parallax).current.current.current;
 
     return (
-        <Breadcrumb id='breadcrumb-container'>
-            <BreadcrumbItem linkAs='h3'>
-                <Link
-                    to='home'
-                    activeClass='active'
-                    spy={true}
-                    smooth={true}
-                >
-                    Home
-                </Link>
+        <Breadcrumb onMouseLeave={() => setIsShown(false)} id='breadcrumb-container'>
+            <BreadcrumbItem linkAs='h3' onClick={() => ref.scrollTo(0)}>
+                Home
             </BreadcrumbItem>
-            <BreadcrumbItem linkAs='h3'>
-                <Link
-                    to='about'
-                    activeClass='active'
-                    spy={true}
-                    smooth={true}
-                >
+            <BreadcrumbItem linkAs='h3' onClick={() => ref.scrollTo(1)}>
                     About Me
-                </Link>
             </BreadcrumbItem>
-            <BreadcrumbItem linkAs='h3'>
-                <Link
-                    to='portfolio'
-                    activeClass='active'
-                    spy={true}
-                    smooth={true}
-                >
+            <BreadcrumbItem linkAs='h3' onClick={() => ref.scrollTo(2)}>
                     My Work
-                </Link>
             </BreadcrumbItem>
-            <BreadcrumbItem linkAs='h3'>
-                <Link
-                    to='contact'
-                    activeClass='active'
-                    spy={true}
-                    smooth={true}
-                >
+            <BreadcrumbItem linkAs='h3' onClick={() => ref.scrollTo(3)}>
                     Contact
-                </Link>
             </BreadcrumbItem>
         </Breadcrumb>
     )

@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react';
 import DropdownMenu from './DropdownMenu';
 
 
-const Heading = () => {
+const Heading = ({parallax}) => {
     const [isShown, setIsShown] = useState(false);
 
     useEffect(() => {
         const mouseLeaveEvent = (e) => {
             e.preventDefault();
-            console.log(e);
         }
 
         // If dropdown is open, listen for mouse hovering out of area
@@ -23,11 +22,11 @@ const Heading = () => {
 
     return (
         <header id='main-hover-menu'>
-                <h1 id='de-header-text' onMouseEnter={() => setIsShown(!isShown)}>durand enterprises</h1>
+                <h1 id='de-header-text' onMouseEnter={() => setIsShown(true)}>durand enterprises</h1>
                 {isShown &&
-                    <DropdownMenu setIsShown={setIsShown} />
+                    <DropdownMenu setIsShown={setIsShown} parallax={parallax} />
                 }
-                <h3 id='home-subtitle'>Custom Web Development</h3>
+                <h3 id='home-subtitle'>Custom Web Development and Tech Consulting</h3>
         </header>
     );
 };
