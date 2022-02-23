@@ -34,7 +34,7 @@ const Contact = ({ parallax }) => {
             <Container>
                 <Row className='section-content'>
                     <Col>
-                        <img src={Phone} fluid={true} className='section-image' alt='Old Phone Vectors by Vecteezy' />
+                        <img src={Phone} fluid='true' className='section-image' alt='Old Phone Vectors by Vecteezy' />
                     </Col>
                     <Col className='section-text'>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem viverra aliquet eget sit amet tellus. Posuere lorem ipsum dolor sit amet consectetur adipiscing. Quam lacus suspendisse faucibus interdum posuere. Ut sem viverra aliquet eget. Quis varius quam quisque id diam. Fames ac turpis egestas integer eget aliquet. Nisi vitae suscipit tellus mauris a diam maecenas. Nisi scelerisque eu ultrices vitae auctor eu augue. Faucibus vitae aliquet nec ullamcorper sit amet risus. Tortor condimentum lacinia quis vel eros donec ac.
