@@ -10,13 +10,13 @@ const Breadcrumbs = ({ setIsShown, parallax }) => {
                 Home
             </BreadcrumbItem>
             <BreadcrumbItem linkAs='h3' onClick={() => ref.scrollTo(1)}>
-                    About Me
+                About Me
             </BreadcrumbItem>
             <BreadcrumbItem linkAs='h3' onClick={() => ref.scrollTo(2)}>
-                    My Work
+                My Work
             </BreadcrumbItem>
             <BreadcrumbItem linkAs='h3' onClick={() => ref.scrollTo(3)}>
-                    Contact
+                Contact
             </BreadcrumbItem>
         </Breadcrumb>
     )

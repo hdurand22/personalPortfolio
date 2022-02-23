@@ -6,6 +6,7 @@ import { TransitionGroup } from 'react-transition-group';
 import Heading from './Heading';
 // import { VideoLink } from './VideoLink';
 import BoomBox from '../assets/boombox.jpg';
+import Computer from '../assets/computer.png';
 
 
 const Home = ({parallax}) => {
@@ -40,7 +41,7 @@ const Home = ({parallax}) => {
             >
                 <ParallaxLayer offset={0} speed={0.8}>
                     <div className='image-flex'>
-                        <a href="https://www.vecteezy.com/free-vector/cassette-player"><img id='splash-boombox' src={BoomBox} alt='Cassette Player Vectors by Vecteezy'/></a>
+                        <img id='splash-computer' src={Computer} alt='Cassette Player Vectors by Vecteezy'/>
                     {/* <video autoPlay muted loop id='home-screen-video' >
                         <source id='video-source' src={CassetteTape} type='video/mp4' />
                     </video> */}
