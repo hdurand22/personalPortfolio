@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import About from './components/About';
 import Contact from './components/Contact';

@@ -2,11 +2,12 @@
   margin-top: 0px;
   background-color: #F2F5F4;
   color: #424242;
+  font-family: 'Fanwood Text', serif;
 }
 
 body {
   margin: 0;
-  font-family: 'Fanwood Text', serif;
+  /* font-family: 'Fanwood Text', serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -146,10 +147,6 @@ a:-webkit-any-link {
 }
 
 #app-container {
-  background-color: transparent;
-}
-
-#root {
   background-color: transparent;
 }
 
