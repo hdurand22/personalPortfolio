@@ -21,10 +21,7 @@ code {
     monospace;
 }
 
-.main-page {
-  width: 100%;
-  height: 100%;
-}
+/* Site-Wide Items */
 
 #breadcrumb-container {
   color: #424242;
@@ -40,6 +37,46 @@ code {
   background-color: transparent;
 }
 
+.image-flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.main-page {
+  width: 100%;
+  height: 100%;
+}
+
+.section-header {
+  background-color: transparent;
+  margin: 15px;
+  padding: 5px;
+}
+
+.section-content {
+  /* margin: 15px; */
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.section-text {
+  width: 60%;
+  margin: 10px;
+  padding: 5px;
+}
+
+.section-image {
+  height: 450px;
+  width: auto;
+  margin: 10px;
+  padding: 10px;
+  /* background-color: transparent; */
+}
+
+/* Splash Screen */
+
 #home-screen {
   display: flex;
   flex-direction: column;
@@ -49,12 +86,6 @@ code {
   padding: 10px;
 }
 
-.image-flex {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
 #splash-computer {
   height: 450px;
   width: auto;
@@ -62,13 +93,13 @@ code {
   padding: 50px;
 }
 
-#home-screen-video {
+/* #home-screen-video {
   position: fixed;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: 0;
-}
+} */
 
 #home-subtitle {
   background-color: transparent;
@@ -150,31 +181,12 @@ a:-webkit-any-link {
   background-color: transparent;
 }
 
-#video-source {
+/* #video-source {
   background-color: transparent;
-}
+} */
 
 #dropdown-link-container {
   background-color: transparent;
-}
-
-.section-header {
-  background-color: transparent;
-  margin: 15px;
-  padding: 5px;
-}
-
-.section-content {
-  /* margin: 15px; */
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-}
-
-.section-text {
-  width: 60%;
-  margin: 10px;
-  padding: 5px;
 }
 
 #nav-parallax-layer {
@@ -185,36 +197,15 @@ a:-webkit-any-link {
   justify-content: flex-start;
 }
 
-.section-image {
-  height: 450px;
-  width: auto;
-  margin: 10px;
-  padding: 10px;
-  /* background-color: transparent; */
-}
-
-.project-thumbnail {
-  height: 300px;
-  width: 100%;
-  padding: 5px;
-  object-fit: cover;
-}
+/* Portfolio Cards */
 
 .card-holder {
-  display: flex;
   margin: 5px;
   padding: 10px;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.project-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 18rem;
-  height: 100%;
-  margin: 10px;
-  padding: 10px;
+.card-col {
+  margin-bottom: 8px;
 }

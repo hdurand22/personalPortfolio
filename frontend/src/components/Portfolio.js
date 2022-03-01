@@ -4,6 +4,7 @@ import { Row, Col, Card, Button } from 'react-bootstrap';
 import Breadcrumbs from './Breadcrumbs';
 // import Phone from '../assets/telephone.jpg';
 import projects from '../projects';
+import { ParallaxLayer } from '@react-spring/parallax';
 
 const Portfolio = ({ parallax }) => {
   const [isShown, setIsShown] = useState(false);
@@ -26,28 +27,32 @@ const Portfolio = ({ parallax }) => {
 
   return (
     <>
-      <div className='section-header' id='portfolio'>
-        <h1 onMouseEnter={() => setIsShown(true)}>My Work</h1>
-        {isShown &&
-          <Breadcrumbs setIsShown={setIsShown} parallax={ref} />
-        }
-      </div>
-      <Row xs={1} md={2} className='card-holder'>
-        {projects.map(project => (
-          <Col>
-            <Card key={project.title} className='project-card'>
-              <a href={project.siteLink}><Card.Img variant="top" src={project.image} className='project-thumbnail' /></a>
-              <Card.Body>
-                <Card.Title><h4>{project.title}</h4></Card.Title>
-                <Card.Text>
-                  {project.description}
-                </Card.Text>
-                <Button>Check out this project!</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
+        <div className='section-header' id='portfolio'>
+          <h1 onMouseEnter={() => setIsShown(true)}>My Work</h1>
+          {isShown &&
+            <Breadcrumbs setIsShown={setIsShown} parallax={ref} />
+          }
+        </div>
+      {/* <h4 className='section-header'>Selected Projects</h4> */}
+      <ParallaxLayer offset={1} speed={0.8}>
+        <p className='section-text'>Below are some of the highlights of my portfolio. If you're interested in taking a look at more of my work, please visit my <a href='https://github.com/hdurand22'>GitHub page</a>.</p>
+        <Row xs={1} md={2} className='card-holder'>
+          {projects.map(project => (
+            <Col key={project.title} className='card-col'>
+              <Card >
+                <a href={project.siteLink}><Card.Img variant="top" src={project.image} /></a>
+                <Card.Body>
+                  <Card.Title><h4>{project.title}</h4></Card.Title>
+                  <Card.Text>
+                    {project.description}
+                  </Card.Text>
+                  <a className='btn btn-outline-secondary' href={project.siteLink} role='button'>Check out this project!</a>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </ParallaxLayer>
     </>
 
   )

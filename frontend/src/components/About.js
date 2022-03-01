@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Breadcrumbs from './Breadcrumbs';
 import BoomBox from '../assets/boombox.jpg';
+import { ParallaxLayer } from '@react-spring/parallax';
 
 const About = ({ parallax }) => {
   const [isShown, setIsShown] = useState(false);
@@ -31,10 +32,11 @@ const About = ({ parallax }) => {
         }
       </div>
       <Container>
+      <ParallaxLayer offset={0.99} speed={0.8}>
         <Row className='section-content'>
-          <Col>
-            <img src={BoomBox} fluid='true' className='section-image' alt='Cassette Player Vectors by Vecteezy' />
-          </Col>
+            <Col>
+              <img src={BoomBox} fluid='true' className='section-image' alt='Cassette Player Vectors by Vecteezy' />
+            </Col>
           <Col className='section-text'>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem viverra aliquet eget sit amet tellus. Posuere lorem ipsum dolor sit amet consectetur adipiscing. Quam lacus suspendisse faucibus interdum posuere. Ut sem viverra aliquet eget. Quis varius quam quisque id diam. Fames ac turpis egestas integer eget aliquet. Nisi vitae suscipit tellus mauris a diam maecenas. Nisi scelerisque eu ultrices vitae auctor eu augue. Faucibus vitae aliquet nec ullamcorper sit amet risus. Tortor condimentum lacinia quis vel eros donec ac.
 
@@ -47,6 +49,7 @@ const About = ({ parallax }) => {
               Sit amet justo donec enim diam vulputate ut. Sit amet consectetur adipiscing elit pellentesque habitant morbi. Morbi leo urna molestie at elementum. Aliquam purus sit amet luctus venenatis lectus magna fringilla. Morbi leo urna molestie at elementum eu. Egestas congue quisque egestas diam in arcu cursus euismod quis. Gravida arcu ac tortor dignissim convallis aenean et tortor at. Amet porttitor eget dolor morbi non arcu. Ornare aenean euismod elementum nisi quis eleifend quam. Aliquam sem et tortor consequat id porta nibh. Nunc sed blandit libero volutpat sed cras ornare. Porttitor lacus luctus accumsan tortor posuere ac ut consequat. Sollicitudin ac orci phasellus egestas tellus. Quis auctor elit sed vulputate mi sit amet mauris. Mi tempus imperdiet nulla malesuada. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus.</p>
           </Col>
         </Row>
+      </ParallaxLayer>
       </Container>
     </>
   );
