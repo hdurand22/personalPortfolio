@@ -9,41 +9,40 @@ const Contact = ({ parallax }) => {
     const [isShown, setIsShown] = useState(false);
     const ref = useRef(parallax);
 
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-
+    const [inputs, setInputs] = useState({
+        email: '',
+        name: '',
+        subject: 'Contact from personal website',
+        message: ''
+    });
     const [status, setStatus] = useState('Submit');
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setStatus('Sending...');
-
-        let details = {
-            name: name.value,
-            email: email.value,
-            message: message.value
-        };
-
-        console.log(details);
-
-        let res = await axios.post('http://localhost:5000/contact', {
-            data: details
-        }).then((res) => {
-            if (res.data.status === 'Message sent') {
-                alert(res.data.status);
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setInputs((prev) => {
+            return {
+                ...prev,
+                [name]: value 
             }
-            else {
-                alert(res.data.status);
-            }
-
-        })
-        
-        setStatus('Submit');
+        });
     }
 
-    const resetForm = () => {
-        
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const { name, email, message, subject } = inputs;
+        setStatus('Sending...');
+
+
+        axios.post('/sendtome', {
+            name,
+            email,
+            subject,
+            text: message
+        }).then(setStatus('Submit')).then(setInputs({
+            email: '',
+            name: '',
+            message: ''
+        }));
     }
 
     useEffect(() => {
@@ -80,15 +79,15 @@ const Contact = ({ parallax }) => {
                             <h3>Get in touch with me!</h3>
                             <FormGroup className='mb-3' controlId='contactName'>
                                 <Form.Label>Name</Form.Label>
-                                <FormControl type='text' placeholder='Enter your full name' value={name} onChange={(e) => setName(e.target.value)} />
+                                <FormControl type='text' name='name' placeholder='Enter your full name' value={inputs.name} onChange={handleChange} />
                             </FormGroup>
                             <FormGroup className='mb-3' controlId='contactEmail'>
                                 <Form.Label>Email</Form.Label>
-                                <FormControl type='email' placeholder='Enter your email address' value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <FormControl type='email' name='email' placeholder='Enter your email address' value={inputs.email} onChange={handleChange} />
                             </FormGroup>
                             <FormGroup className='mb-3' controlId='contactMessage'>
                                 <Form.Label>Message</Form.Label>
-                                <FormControl as='textarea' rows={8} value={message} onChange={(e) => setMessage(e.target.value)}/>
+                                <FormControl as='textarea' name='message' rows={8} value={inputs.message} onChange={handleChange}/>
                             </FormGroup>
                             <Button type='submit'>{status}</Button>
                         </Form>
