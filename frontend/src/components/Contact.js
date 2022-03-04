@@ -71,10 +71,10 @@ const Contact = ({ parallax }) => {
             <Container>
             <ParallaxLayer offset={1.8} speed={0.8}>
                 <Row className='section-content'>
-                    <Col>
-                        <img src={Phone} fluid='true' className='section-image' alt='Old Phone Vectors by Vecteezy' />
+                    <Col xxl={4} className='section-image'>
+                        <img src={Phone} fluid='true' alt='Old Phone Vectors by Vecteezy' />
                     </Col>
-                    <Col className='section-text'>
+                    <Col xxl={6} className='section-text'>
                         <Form onSubmit={handleSubmit}>
                             <h3>Get in touch with me!</h3>
                             <FormGroup className='mb-3' controlId='contactName'>
