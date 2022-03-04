@@ -1,6 +1,6 @@
 // import { ParallaxLayer } from '@react-spring/parallax';
 import React, { useState, useEffect, useRef } from 'react';
-import { Row, Col, Card, Button } from 'react-bootstrap';
+import { Row, Col, Card } from 'react-bootstrap';
 import Breadcrumbs from './Breadcrumbs';
 // import Phone from '../assets/telephone.jpg';
 import projects from '../projects';
@@ -33,10 +33,9 @@ const Portfolio = ({ parallax }) => {
             <Breadcrumbs setIsShown={setIsShown} parallax={ref} />
           }
         </div>
-      {/* <h4 className='section-header'>Selected Projects</h4> */}
-      <ParallaxLayer offset={1} speed={0.8}>
+      <ParallaxLayer className='layer' offset={1} speed={0.8}>
         <p className='section-text'>Below are some of the highlights of my portfolio. If you're interested in taking a look at more of my work, please visit my <a href='https://github.com/hdurand22'>GitHub page</a>.</p>
-        <Row xs={1} md={2} className='card-holder'>
+        <Row xxl={2} xl={2} lg={2} md={1} sm={1} xs={1} className='card-holder'>
           {projects.map(project => (
             <Col key={project.title} className='card-col'>
               <Card >

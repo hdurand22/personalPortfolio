@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import Breadcrumbs from './Breadcrumbs';
 import BoomBox from '../assets/boombox.jpg';
 import { ParallaxLayer } from '@react-spring/parallax';
@@ -31,13 +31,12 @@ const About = ({ parallax }) => {
           <Breadcrumbs setIsShown={setIsShown} parallax={ref} />
         }
       </div>
-      <Container>
-      <ParallaxLayer offset={0.99} speed={0.8}>
-        <Row className='section-content'>
-            <Col xxl={4} className='section-image'>
+      <ParallaxLayer className='layer' offset={0.99} speed={0.8}>
+        <Row xxl={2} xl={2} lg={2} md={1} sm={1} xs={1} className='section-content'>
+            <Col xxl={4} xl={6} md={5} sm={9} xs={9} className='section-image'>
               <img src={BoomBox} fluid='true' alt='Cassette Player Vectors by Vecteezy' />
             </Col>
-          <Col className='section-text'>
+          <Col xxl={6} xl={10} lg={11} md={11} sm={11} xs={11} className='section-text'>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem viverra aliquet eget sit amet tellus. Posuere lorem ipsum dolor sit amet consectetur adipiscing. Quam lacus suspendisse faucibus interdum posuere. Ut sem viverra aliquet eget. Quis varius quam quisque id diam. Fames ac turpis egestas integer eget aliquet. Nisi vitae suscipit tellus mauris a diam maecenas. Nisi scelerisque eu ultrices vitae auctor eu augue. Faucibus vitae aliquet nec ullamcorper sit amet risus. Tortor condimentum lacinia quis vel eros donec ac.
 
               Nunc scelerisque viverra mauris in aliquam sem. Faucibus turpis in eu mi. Nullam eget felis eget nunc lobortis mattis aliquam faucibus purus. Sit amet commodo nulla facilisi. Et netus et malesuada fames ac turpis egestas sed tempus. Mauris vitae ultricies leo integer. Amet commodo nulla facilisi nullam. Gravida quis blandit turpis cursus. Neque convallis a cras semper auctor neque vitae tempus quam. Odio facilisis mauris sit amet massa vitae tortor condimentum. Maecenas pharetra convallis posuere morbi. Egestas quis ipsum suspendisse ultrices. Orci nulla pellentesque dignissim enim sit amet venenatis.
@@ -46,7 +45,6 @@ const About = ({ parallax }) => {
           </Col>
         </Row>
       </ParallaxLayer>
-      </Container>
     </>
   );
 };

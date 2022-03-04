@@ -1,7 +1,7 @@
 import { ParallaxLayer } from '@react-spring/parallax';
 import axios from 'axios';
 import React, { useState, useEffect, useRef } from 'react';
-import { Container, Row, Col, FormControl, FormGroup, Form, Button } from 'react-bootstrap';
+import { Row, Col, FormControl, FormGroup, Form, Button } from 'react-bootstrap';
 import Breadcrumbs from './Breadcrumbs';
 import Phone from '../assets/telephone.jpg';
 
@@ -68,14 +68,13 @@ const Contact = ({ parallax }) => {
                     <Breadcrumbs setIsShown={setIsShown} parallax={ref} />
                 }
             </div>
-            <Container>
-            <ParallaxLayer offset={1.8} speed={0.8}>
-                <Row className='section-content'>
-                    <Col xxl={4} className='section-image'>
+            <ParallaxLayer id='contact-layer' offset={1.8} speed={0.8}>
+                <Row xxl={2} xl={2} lg={2} md={1} sm={1} xs={1} className='section-content'>
+                    <Col xxl={4} xl={4} lg={4} md={5} sm={7} xs={7} className='section-image'>
                         <img src={Phone} fluid='true' alt='Old Phone Vectors by Vecteezy' />
                     </Col>
-                    <Col xxl={6} className='section-text'>
-                        <Form onSubmit={handleSubmit}>
+                    <Col xxl={6} xl={6} lg={7} md={11} sm={11} xs={10} className='section-text'>
+                        <Form id='email-form' onSubmit={handleSubmit}>
                             <h3>Get in touch with me!</h3>
                             <FormGroup className='mb-3' controlId='contactName'>
                                 <Form.Label>Name</Form.Label>
@@ -87,14 +86,13 @@ const Contact = ({ parallax }) => {
                             </FormGroup>
                             <FormGroup className='mb-3' controlId='contactMessage'>
                                 <Form.Label>Message</Form.Label>
-                                <FormControl as='textarea' name='message' rows={8} value={inputs.message} onChange={handleChange}/>
+                                <FormControl as='textarea' name='message' rows={4} value={inputs.message} onChange={handleChange}/>
                             </FormGroup>
                             <Button type='submit'>{status}</Button>
                         </Form>
                     </Col>
                 </Row>
             </ParallaxLayer>
-            </Container>
         </>
 
     )
