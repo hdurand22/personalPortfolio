@@ -2,14 +2,10 @@ import React from 'react';
 import { Fade } from 'react-reveal';
 import { ParallaxLayer } from '@react-spring/parallax';
 import { TransitionGroup } from 'react-transition-group';
-// import CassetteTape from '../assets/Cassette_Tape.mp4';
 import Heading from './Heading';
-// import { VideoLink } from './VideoLink';
-import BoomBox from '../assets/boombox.jpg';
 import Computer from '../assets/computer.png';
 
-
-const Home = ({parallax}) => {
+const Home = ({ parallax }) => {
 
     return (
         <div id='home'>
@@ -23,15 +19,6 @@ const Home = ({parallax}) => {
                 >
                     <Heading parallax={parallax} />
                 </Fade>
-                {/* <Fade
-                    right
-                    appear={true}
-                    delay={1250}
-                    duration={1000}
-                    timeout={1000}
-                >
-                    <VideoLink />
-                </Fade> */}
             </TransitionGroup>
             <Fade
                 left
@@ -39,12 +26,9 @@ const Home = ({parallax}) => {
                 duration={1250}
                 timeout={1250}
             >
-                <ParallaxLayer offset={0} speed={0.8}>
+                <ParallaxLayer className='layer' offset={0} speed={0.8}>
                     <div className='image-flex'>
-                        <img id='splash-computer' src={Computer} alt='Cassette Player Vectors by Vecteezy'/>
-                    {/* <video autoPlay muted loop id='home-screen-video' >
-                        <source id='video-source' src={CassetteTape} type='video/mp4' />
-                    </video> */}
+                        <img id='splash-computer' src={Computer} alt='Cassette Player Vectors by Vecteezy' />
                     </div>
                 </ParallaxLayer>
             </Fade>
