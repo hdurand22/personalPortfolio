@@ -83,6 +83,10 @@
     flex: 1;
   }
 
+  .breadcrumb-item:hover {
+    cursor: pointer;
+  }
+
   .image-flex {
     display: flex;
     align-items: center;
@@ -196,7 +200,13 @@
 
   .nav-option {
     flex: 1;
+
   }
+
+  .nav-option:hover {
+    cursor: pointer;
+  }
+
 
   #dropdown-link-container {
     width: 50rem;
@@ -571,6 +581,11 @@
 
     .section-box {
       display: flex;
+    }
+
+    .section-text {
+      width: 100%;
+      padding: 5px;
     }
 
       #contact-layer {

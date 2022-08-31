@@ -9,6 +9,8 @@ import { ScreenSizeContext } from '../App';
 const Contact = ({ parallax }) => {
     const [isShown, setIsShown] = useState(false);
     const ref = useRef(parallax);
+
+    console.log(ref);
     const { isTabletOrMobile } = useContext(ScreenSizeContext);
 
     const [inputs, setInputs] = useState({
@@ -72,7 +74,7 @@ const Contact = ({ parallax }) => {
                             <Breadcrumbs parallax={ref} />   
                         </div>
                     </ParallaxLayer>
-                    <ParallaxLayer className='layer' offset={1.5} speed={0.7}>
+                    <ParallaxLayer className='layer' offset={1.4} speed={0.7}>
                         <Row xxl={2} xl={2} lg={2} md={1} sm={1} xs={1} className='section-content'>
                             <Col xxl={4} xl={4} lg={4} md={5} sm={7} xs={7} className='section-image'>
                                 <img src={Phone} fluid='true' alt='Old Phone Vectors by Vecteezy' />
