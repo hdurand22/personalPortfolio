@@ -28,12 +28,11 @@ const Portfolio = ({ parallax }) => {
   return (
     <>
       {isTabletOrMobile ?
-        <ParallaxLayer className='layer' offset={1} speed={0.8}>
+        <ParallaxLayer className='layer' offset={2} speed={0.8}>
           <div className='section-header' id='portfolio'>  
             <h1>My Work</h1>
             <Breadcrumbs parallax={ref} />
           </div>
-        <ParallaxLayer className='layer' offset={1} speed={0.8}>
           <p className='section-text'>Below are some of the highlights of my portfolio. If you're interested in taking a look at more of my work, please visit my <a href='https://github.com/hdurand22'>GitHub page</a>.</p>
           <Row xxl={2} xl={2} lg={2} md={1} sm={1} xs={1} className='card-holder'>
             {projects.map(project => (
@@ -51,17 +50,18 @@ const Portfolio = ({ parallax }) => {
               </Col>
             ))}
           </Row>
-        </ParallaxLayer>
+        {/* <ParallaxLayer className='layer' offset={1} speed={0.8}>
+        </ParallaxLayer> */}
       </ParallaxLayer>
         :
         <>
+          <ParallaxLayer className='layer' offset={2} speed={0.8}>
           <div className='section-header' id='portfolio'>
             <h1 onMouseEnter={() => setIsShown(true)}>My Work</h1>
             {isShown &&
               <Breadcrumbs setIsShown={setIsShown} parallax={ref} />
             }
           </div>
-          <ParallaxLayer className='layer' offset={1} speed={0.8}>
             <p className='section-text'>Below are some of the highlights of my portfolio. If you're interested in taking a look at more of my work, please visit my <a href='https://github.com/hdurand22'>GitHub page</a>.</p>
             <Row xxl={2} xl={2} lg={2} md={1} sm={1} xs={1} className='card-holder'>
               {projects.map(project => (

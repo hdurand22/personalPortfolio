@@ -92,10 +92,9 @@
     align-items: center;
     justify-content: flex-end;
   }
-
-  .main-page {
-    width: 100%;
-    height: 100%;
+  
+  .layer {
+    border: 1px solid red;
   }
 
   .section-header {
@@ -289,10 +288,6 @@
 
       .container {
         padding: 0 2em 0 2em;
-      }
-
-      div.layer {
-        inset: -25px 10px;
       }
 
     /* Header */
