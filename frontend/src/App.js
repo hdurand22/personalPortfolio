@@ -18,14 +18,15 @@ function App() {
     isTabletOrMobile
   }), [isTabletOrMobile]);
 
+
   return (
     <ScreenSizeContext.Provider value={value}>
-        <Parallax ref={parallax} pages={4}>
-            <Home parallax={parallax}/>
-            <About parallax={parallax} />
-            <Portfolio parallax={parallax}/>
-            <Contact parallax={parallax} />
-        </Parallax>
+      <Parallax ref={parallax} pages={4}>
+          <Home parallax={parallax}/>
+          <About parallax={parallax} />
+          <Portfolio parallax={parallax}/>
+          <Contact parallax={parallax} />
+      </Parallax>
     </ScreenSizeContext.Provider>
   );
 }

@@ -8,8 +8,6 @@ const Heading = ({parallax}) => {
     const [isShown, setIsShown] = useState(false);
     const { isTabletOrMobile } = useContext(ScreenSizeContext);
 
-    console.log(isTabletOrMobile);
-
     useEffect(() => {
         const mouseLeaveEvent = (e) => {
             e.preventDefault();
