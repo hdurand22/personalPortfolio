@@ -50,8 +50,6 @@ const Portfolio = ({ parallax }) => {
               </Col>
             ))}
           </Row>
-        {/* <ParallaxLayer className='layer' offset={1} speed={0.8}>
-        </ParallaxLayer> */}
       </ParallaxLayer>
         :
         <>

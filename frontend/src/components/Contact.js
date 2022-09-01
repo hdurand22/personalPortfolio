@@ -97,8 +97,6 @@ const Contact = ({ parallax }) => {
                             </Col>
                         </Row>
                     </ParallaxLayer>
-                    {/* <ParallaxLayer className='layer' offset={1.4} speed={0.7}>
-                    </ParallaxLayer> */}
                 </>
             :
             <>

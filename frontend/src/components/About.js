@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
-import { Row, Col, Container } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import Breadcrumbs from './Breadcrumbs';
 import BoomBox from '../assets/boombox.jpg';
 import { ParallaxLayer } from '@react-spring/parallax';
@@ -45,9 +45,7 @@ const About = ({ parallax }) => {
               Ultricies mi eget mauris pharetra et ultrices. Placerat orci nulla pellentesque dignissim enim sit. Magna eget est lorem ipsum dolor sit amet consectetur adipiscing. Lectus urna duis convallis convallis tellus. Venenatis lectus magna fringilla urna. Lorem donec massa sapien faucibus et molestie ac feugiat sed. Mauris nunc congue nisi vitae suscipit. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Diam quis enim lobortis scelerisque fermentum dui faucibus. Pulvinar proin gravida hendrerit lectus. Imperdiet massa tincidunt nunc pulvinar. Volutpat odio facilisis mauris sit. Ultricies mi eget mauris pharetra et ultrices neque ornare. Tellus mauris a diam maecenas. Nisi vitae suscipit tellus mauris a diam maecenas.</p>
               </Col>
           </Row>
-          {/* <ParallaxLayer className='layer' offset={0.93} speed={0.7}>
-          </ParallaxLayer> */}
-          </ParallaxLayer>
+        </ParallaxLayer>
       :
       <>
         <ParallaxLayer className='layer' offset={1} speed={0.8}>
