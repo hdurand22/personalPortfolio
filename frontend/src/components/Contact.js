@@ -10,7 +10,6 @@ const Contact = ({ parallax }) => {
     const [isShown, setIsShown] = useState(false);
     const ref = useRef(parallax);
 
-    console.log(ref);
     const { isTabletOrMobile } = useContext(ScreenSizeContext);
 
     const [inputs, setInputs] = useState({

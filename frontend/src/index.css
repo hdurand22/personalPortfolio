@@ -620,4 +620,89 @@
       }
   }
 
+  @media screen and (max-width: 375px) {
+
+    /* Basic */
+
+      body, input, textarea, select {
+        font-size: 12pt !important;
+      }
+
+      h1 {
+        font-size: 1em !important;
+      }
+
+      h2 {
+        font-size: 0.9em !important;
+        letter-spacing: 0;
+        font-weight: 300;
+      }
+
+      h3 {
+        font-size: 0.8em !important;
+      }
+
+      .form-label {
+        font-size: 0.8em !important;
+      }
+
+      input {
+        font-size: 0.8em !important;
+      }
+
+      button {
+        font-size: 0.8em !important;
+      }
+
+      .container {
+        padding: 0 15px 0 15px;
+      }
+
+
+    /* Splash Screen Nav */
+
+      #responsive-navbar-nav {
+        padding: 5px;
+        margin: 5px;
+      }
+
+      #dropdown-nav-mobile {
+        flex-wrap: nowrap;
+      }
+
+      .navbar-collapse, .collapse, .show {
+        flex: 1;
+        margin-left: 10px;
+      }
+
+      button {
+        margin: 5px;
+        padding: 2px;
+      }
+
+      .button.navbar-toggler {
+        margin: 5px;
+      }
+
+    /* Section */
+
+    .section-header {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .section-box {
+      display: flex;
+    }
+
+    .section-text {
+      width: 100%;
+      padding: 5px;
+      margin: 5px;
+    }
+    
+  }
+
 

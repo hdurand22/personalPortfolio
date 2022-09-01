@@ -20,16 +20,16 @@ const DropdownMenu = ({ setIsShown, parallax }) => {
                     <Container id='dropdown-link-container'>
                         <Navbar.Collapse id='responsive-navbar-nav'>
                             <Nav className='me-auto'>
-                                <h2 className='nav-option' onClick={() => ref.current.current.scrollTo(1)}>About Me</h2>
-                                <h2 className='nav-option' onClick={() => ref.current.current.scrollTo(2)}>My Work</h2>
-                                <h2 className='nav-option' onClick={() => ref.current.current.scrollTo(3)}>Contact</h2>
+                                <h2 className='nav-option' onClick={() => handleSelect(1)}>About Me</h2>
+                                <h2 className='nav-option' onClick={() => handleSelect(2)}>My Work</h2>
+                                <h2 className='nav-option' onClick={() => handleSelect(3)}>Contact</h2>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
                 :
                 <Navbar id='dropdown-nav-mobile' expand='xxl' expanded={expanded}>
-                    <Navbar.Toggle aria-controls='responsive-navbar-nav' onClick={() => setExpanded(true)}/>
+                    <Navbar.Toggle aria-controls='responsive-navbar-nav' onClick={() => expanded ? setExpanded(false) : setExpanded(true)}/>
                     <Navbar.Collapse id='responsive-navbar-nav'>
                         <Nav className='me-auto'>
                                 <h2 className='nav-option' onClick={() => handleSelect(1)}>About Me</h2>
