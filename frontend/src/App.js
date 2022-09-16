@@ -1,4 +1,4 @@
-import React, { useRef, createContext, useMemo } from 'react';
+import React, { useRef, createContext, useMemo, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Parallax } from '@react-spring/parallax';
 import About from './components/About';
@@ -21,12 +21,12 @@ function App() {
 
   return (
     <ScreenSizeContext.Provider value={value}>
-      <Parallax ref={parallax} pages={4}>
-          <Home parallax={parallax}/>
-          <About parallax={parallax} />
-          <Portfolio parallax={parallax}/>
-          <Contact parallax={parallax} />
-      </Parallax>
+          <Parallax ref={parallax} pages={isTabletOrMobile ? 8 : 4}>
+            <Home parallax={parallax}/>
+            <About parallax={parallax} />
+            <Portfolio parallax={parallax}/>
+            <Contact parallax={parallax} />
+          </Parallax>
     </ScreenSizeContext.Provider>
   );
 }

@@ -30,7 +30,7 @@ const Breadcrumbs = ({ setIsShown, parallax }) => {
                     Contact
                 </BreadcrumbItem>
             </Breadcrumb>
-        :
+            :
             <Navbar className='nav-mobile' expand='xxl' expanded={expanded}>
                 <Navbar.Toggle aria-controls='responsive-navbar-nav' onClick={() => expanded ? setExpanded(false) : setExpanded(true)} />
                 <Navbar.Collapse id='responsive-navbar-nav'>

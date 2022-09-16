@@ -6,7 +6,7 @@ import Heading from './Heading';
 import Computer from '../assets/computer.png';
 
 const Home = ({ parallax }) => {
-
+    
     return (
         <div id='home'>
             <TransitionGroup id='home-screen'>
