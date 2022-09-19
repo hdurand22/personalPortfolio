@@ -21,7 +21,7 @@ function App() {
 
   return (
     <ScreenSizeContext.Provider value={value}>
-          <Parallax ref={parallax} pages={isTabletOrMobile ? 8 : 4}>
+          <Parallax ref={parallax} pages={4}>
             <Home parallax={parallax}/>
             <About parallax={parallax} />
             <Portfolio parallax={parallax}/>

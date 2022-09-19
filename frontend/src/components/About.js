@@ -30,7 +30,7 @@ const About = ({ parallax }) => {
     <>
       {isTabletOrMobile ?
           <>
-            <ParallaxLayer className='layer'  offset={1} speed={0.6} style={{ zIndex: 5, height: '10px' }}>
+            <ParallaxLayer className='layer'  offset={1} speed={0.6} style={{ zIndex: 5, height: '6px' }}>
               <div className='section-header' id='about'>
                 <h1>About Me</h1>
                 <Breadcrumbs parallax={ref} />  

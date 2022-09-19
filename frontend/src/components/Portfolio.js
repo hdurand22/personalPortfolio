@@ -29,13 +29,13 @@ const Portfolio = ({ parallax }) => {
     <>
       {isTabletOrMobile ?
         <>
-          <ParallaxLayer className='layer' offset={2.6} speed={0.6} style={{ zIndex: 2, height: '10px' }}>
+          <ParallaxLayer className='layer' offset={2} speed={0.6} style={{ zIndex: 2, height: '6px' }}>
             <div className='section-header' id='portfolio'>  
               <h1>My Work</h1>
               <Breadcrumbs parallax={ref} />
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={2.9} speed={0.8}>
+          <ParallaxLayer offset={2.2} speed={0.8}>
               <p className='section-text'>Below are some of the highlights of my portfolio. If you're interested in taking a look at more of my work, please visit my <a href='https://github.com/hdurand22'>GitHub page</a>.</p>
               <Row xxl={2} xl={2} lg={2} md={1} sm={1} xs={1} className='card-holder'>
                 {projects.map(project => (

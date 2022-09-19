@@ -66,7 +66,7 @@ const Contact = ({ parallax }) => {
         <>
             {isTabletOrMobile ?
             <>
-                <ParallaxLayer className='layer' offset={3} speed={0.6}>
+                <ParallaxLayer className='layer' offset={3} speed={0.6} style={{ zIndex: 5, height: '6px' }}>
                     <div className='section-header' id='contact'>
                         <h1>Contact</h1>
                         <Breadcrumbs parallax={ref} />   
