@@ -1,4 +1,4 @@
-import React, { useRef, createContext, useMemo, useEffect } from 'react';
+import React, { useRef, createContext, useMemo } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Parallax } from '@react-spring/parallax';
 import About from './components/About';

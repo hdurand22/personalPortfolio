@@ -24,7 +24,7 @@ const transporter = nodemailer.createTransport(transport);
             console.error(error);
         }
         else {
-            console.log('ready to send')
+            console.log(success, 'ready to send')
         }
     });
 

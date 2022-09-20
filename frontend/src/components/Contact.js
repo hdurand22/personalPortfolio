@@ -66,7 +66,7 @@ const Contact = ({ parallax }) => {
         <>
             {isTabletOrMobile ?
             <>
-                <ParallaxLayer className='layer' offset={3} speed={0.6} style={{ zIndex: 5, height: '6px' }}>
+                <ParallaxLayer className='layer' offset={3} speed={0.6} style={{ zIndex: 5, height: '4px' }}>
                     <div className='section-header' id='contact'>
                         <h1>Contact</h1>
                         <Breadcrumbs parallax={ref} />   
@@ -100,13 +100,15 @@ const Contact = ({ parallax }) => {
             </>
             :
             <>
-                <ParallaxLayer id='layer' offset={3} speed={0.8}>
+                <ParallaxLayer id='layer' offset={3} speed={0.6}>
                     <div className='section-header' id='contact'>
                         <h1 onMouseEnter={() => setIsShown(true)}>Contact</h1>
                         {isShown &&
                             <Breadcrumbs setIsShown={setIsShown} parallax={ref} />
                         }
                     </div>
+                </ParallaxLayer>
+                <ParallaxLayer offset={3.2} speed={0.8}>
                     <Row xxl={2} xl={2} lg={2} md={1} sm={1} xs={1} className='section-content'>
                         <Col xxl={4} xl={4} lg={4} md={5} sm={7} xs={7} className='section-image'>
                             <img src={Phone} fluid='true' alt='Old Phone Vectors by Vecteezy' />

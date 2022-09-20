@@ -29,14 +29,14 @@ const Portfolio = ({ parallax }) => {
     <>
       {isTabletOrMobile ?
         <>
-          <ParallaxLayer className='layer' offset={2} speed={0.6} style={{ zIndex: 2, height: '6px' }}>
+          <ParallaxLayer className='layer' offset={2} speed={0.6} style={{ zIndex: 2, height: '4px' }}>
             <div className='section-header' id='portfolio'>  
               <h1>My Work</h1>
               <Breadcrumbs parallax={ref} />
             </div>
           </ParallaxLayer>
           <ParallaxLayer offset={2.2} speed={0.8}>
-              <p className='section-text'>Below are some of the highlights of my portfolio. If you're interested in taking a look at more of my work, please visit my <a href='https://github.com/hdurand22'>GitHub page</a>.</p>
+              <p className='section-text'>Below are some of the highlights from my portfolio. Check out my <a href='https://github.com/hdurand22'>GitHub page</a> for all of my work.</p>
               <Row xxl={2} xl={2} lg={2} md={1} sm={1} xs={1} className='card-holder'>
                 {projects.map(project => (
                   <Col key={project.title} className='card-col'>
@@ -57,14 +57,16 @@ const Portfolio = ({ parallax }) => {
         </>
         :
         <>
-          <ParallaxLayer className='layer' offset={2} speed={0.8}>
+          <ParallaxLayer className='layer' offset={2} speed={0.6}>
             <div className='section-header' id='portfolio'>
               <h1 onMouseEnter={() => setIsShown(true)}>My Work</h1>
               {isShown &&
                 <Breadcrumbs setIsShown={setIsShown} parallax={ref} />
               }
             </div>
-            <p className='section-text'>Below are some of the highlights of my portfolio. If you're interested in taking a look at more of my work, please visit my <a href='https://github.com/hdurand22'>GitHub page</a>.</p>
+          </ParallaxLayer>
+          <ParallaxLayer offset={2.2} speed={0.8}>
+            <p className='section-text'>Below are some of the highlights from my portfolio. Check out my <a href='https://github.com/hdurand22'>GitHub page</a> for all of my work.</p>
             <Row xxl={2} xl={2} lg={2} md={1} sm={1} xs={1} className='card-holder'>
               {projects.map(project => (
                 <Col key={project.title} className='card-col'>
