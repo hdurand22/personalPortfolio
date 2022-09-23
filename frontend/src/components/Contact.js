@@ -18,6 +18,43 @@ const Contact = ({ parallax }) => {
         message: ''
     });
     const [status, setStatus] = useState('Submit');
+    const [emailError, setEmailError] = useState(null);
+    const [nameError, setNameError] = useState(null);
+    const [messageError, setMessageError] = useState(null);
+
+    const isValidName = (name) => {
+        if (name.length < 2) {
+            setNameError('Name must be at least 2 characters');
+            return false;
+        }
+        else {
+            setNameError(null);
+            return true;
+        }
+    }
+
+    const isValidEmail = (email) => {
+        if (/\S+@\S+\.\S+/.test(email) === false) {
+            setEmailError('Invalid email address');
+            return false;
+        }
+        else {
+            setEmailError(null);
+            return true;
+        }
+    }
+
+    const isValidMessage = (message) => {
+        if (message.length < 1) {
+            setMessageError('Message must be at least 1 character');
+            return false;
+        }
+        else {
+            setMessageError(null);
+            return true;
+        }
+    }
+
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -32,19 +69,24 @@ const Contact = ({ parallax }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const { name, email, message, subject } = inputs;
-        setStatus('Sending...');
-
-
-        axios.post('/sendtome', {
-            name,
-            email,
-            subject,
-            text: message
-        }).then(setStatus('Submit')).then(setInputs({
-            email: '',
-            name: '',
-            message: ''
-        }));
+        const emailCheck = isValidEmail(email);
+        const nameCheck = isValidName(name);
+        const messageCheck = isValidMessage(message);
+        
+        if (emailCheck && nameCheck && messageCheck) {
+            setStatus('Sending...');
+            axios.post('/sendtome', {
+                name,
+                email,
+                subject,
+                text: message
+            }).then(setStatus('Submit')).then(setInputs({
+                email: '',
+                name: '',
+                message: ''
+            }));
+        }
+        return;
     }
 
     useEffect(() => {
@@ -83,14 +125,17 @@ const Contact = ({ parallax }) => {
                                 <FormGroup className='mb-3' controlId='contactName'>
                                     <Form.Label>Name</Form.Label>
                                     <FormControl type='text' name='name' placeholder='Enter your full name' value={inputs.name} onChange={handleChange} />
+                                    {nameError && <p style={{color: 'red'}}>{nameError}</p>}
                                 </FormGroup>
                                 <FormGroup className='mb-3' controlId='contactEmail'>
                                     <Form.Label>Email</Form.Label>
                                     <FormControl type='email' name='email' placeholder='Enter your email address' value={inputs.email} onChange={handleChange} />
+                                    {emailError && <p style={{color: 'red'}}>{emailError}</p>}
                                 </FormGroup>
                                 <FormGroup className='mb-3' controlId='contactMessage'>
                                     <Form.Label>Message</Form.Label>
                                     <FormControl as='textarea' name='message' rows={4} value={inputs.message} onChange={handleChange}/>
+                                    {messageError && <p style={{color: 'red'}}>{messageError}</p>}
                                 </FormGroup>
                                 <Button type='submit'>{status}</Button>
                             </Form>
@@ -119,14 +164,17 @@ const Contact = ({ parallax }) => {
                                 <FormGroup className='mb-3' controlId='contactName'>
                                     <Form.Label>Name</Form.Label>
                                     <FormControl type='text' name='name' placeholder='Enter your full name' value={inputs.name} onChange={handleChange} />
+                                    {nameError && <p style={{color: 'red'}}>{nameError}</p>}
                                 </FormGroup>
                                 <FormGroup className='mb-3' controlId='contactEmail'>
                                     <Form.Label>Email</Form.Label>
                                     <FormControl type='email' name='email' placeholder='Enter your email address' value={inputs.email} onChange={handleChange} />
+                                    {emailError && <p style={{color: 'red'}}>{emailError}</p>}
                                 </FormGroup>
                                 <FormGroup className='mb-3' controlId='contactMessage'>
                                     <Form.Label>Message</Form.Label>
                                     <FormControl as='textarea' name='message' rows={4} value={inputs.message} onChange={handleChange}/>
+                                    {messageError && <p style={{color: 'red'}}>{messageError}</p>}
                                 </FormGroup>
                                 <Button type='submit'>{status}</Button>
                             </Form>

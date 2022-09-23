@@ -34,9 +34,9 @@ sendToMeRouter.post('/', (req, res, next) => {
         to: 'hayden@durandenterprises.com',
         subject: req.body.subject,
         text: `
-            from: ${req.body.name}
-            contact: ${req.body.email}
-            message: ${req.body.text}`
+            From: ${req.body.name}
+            Contact: ${req.body.email}
+            Message: ${req.body.text}`
     }
     
     transporter.sendMail(mail, (err, data) => {
