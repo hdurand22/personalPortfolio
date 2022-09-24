@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
-import { Row, Col, Card } from 'react-bootstrap';
+import { Row, Col, Card, Image } from 'react-bootstrap';
 import Breadcrumbs from './Breadcrumbs';
 import projects from '../projects';
 import { ParallaxLayer } from '@react-spring/parallax';
@@ -35,24 +35,26 @@ const Portfolio = ({ parallax }) => {
               <Breadcrumbs parallax={ref} />
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={2.2} speed={0.8}>
-              <p className='section-text'>Below are some of the highlights from my portfolio. Check out my <a href='https://github.com/hdurand22'>GitHub page</a> for all of my work.</p>
+          <ParallaxLayer offset={2.15} speed={0.8}>
+              <h4 className='section-text'>Check out some of my past and present clients!</h4>
               <Row xxl={2} xl={2} lg={2} md={1} sm={1} xs={1} className='card-holder'>
                 {projects.map(project => (
-                  <Col key={project.title} className='card-col'>
-                    <Card >
-                      <a href={project.siteLink}><Card.Img variant="top" src={project.image} /></a>
-                      <Card.Body>
-                        <Card.Title><h4>{project.title}</h4></Card.Title>
-                        <Card.Text>
-                          {project.description}
-                        </Card.Text>
-                        <a className='btn btn-outline-secondary' href={project.siteLink} role='button'>Check out this project!</a>
-                      </Card.Body>
-                    </Card>
-                  </Col>
+                  <Image key={project.title} roundedCircle={true} src={project.image} className='project-circle'/>
+                  // <Col key={project.title} className='card-col'>
+                  //   <Card >
+                  //     <a href={project.siteLink}><Card.Img variant="top" src={project.image} /></a>
+                  //     <Card.Body>
+                  //       <Card.Title><h4>{project.title}</h4></Card.Title>
+                  //       <Card.Text>
+                  //         {project.description}
+                  //       </Card.Text>
+                  //       <a className='btn btn-outline-secondary' href={project.siteLink} role='button'>Check out this project!</a>
+                  //     </Card.Body>
+                  //   </Card>
+                  // </Col>
                 ))}
               </Row>
+              <p className='section-text'>Interested in something a bit more techincal? Check out my <a href='https://github.com/hdurand22'>GitHub page</a>.</p>
           </ParallaxLayer>
         </>
         :
@@ -65,24 +67,26 @@ const Portfolio = ({ parallax }) => {
               }
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={2.2} speed={0.8}>
-            <p className='section-text'>Below are some of the highlights from my portfolio. Check out my <a href='https://github.com/hdurand22'>GitHub page</a> for all of my work.</p>
-            <Row xxl={2} xl={2} lg={2} md={1} sm={1} xs={1} className='card-holder'>
+          <ParallaxLayer offset={2.15} speed={0.8}>
+            <h5 className='section-text'>Check out some of my past and present clients!</h5>
+            <div className='card-holder'>
               {projects.map(project => (
-                <Col key={project.title} className='card-col'>
-                  <Card >
-                    <a href={project.siteLink}><Card.Img variant="top" src={project.image} /></a>
-                    <Card.Body>
-                      <Card.Title><h4>{project.title}</h4></Card.Title>
-                      <Card.Text>
-                        {project.description}
-                      </Card.Text>
-                      <a className='btn btn-outline-secondary' href={project.siteLink} role='button'>Check out this project!</a>
-                    </Card.Body>
-                  </Card>
-                </Col>
+                // <div  className='card-col'>
+                  <Image key={project.title} roundedCircle={true} src={project.image} className='project-circle'/>
+                  //* <Card >
+                  //   <a href={project.siteLink}><Card.Img variant="top" src={project.image} /></a>
+                  //   <Card.Body>
+                  //     <Card.Title><h4>{project.title}</h4></Card.Title>
+                  //     <Card.Text>
+                  //       {project.description}
+                  //     </Card.Text>
+                  //     <a className='btn btn-outline-secondary' href={project.siteLink} role='button'>Check out this project!</a>
+                  //   </Card.Body>
+                  // </Card> */
+                  // </div>}
               ))}
-            </Row>
+            </div>
+            <p className='section-text'>Interested in something a bit more techincal? Check out my <a href='https://github.com/hdurand22'>GitHub page</a>.</p>
           </ParallaxLayer>
         </>
       }
