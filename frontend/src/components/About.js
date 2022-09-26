@@ -29,13 +29,13 @@ const About = ({ parallax }) => {
     <>
       {isTabletOrMobile ?
           <>
-            <ParallaxLayer className='layer'  offset={1} speed={0.6} style={{ zIndex: 5, height: '4px' }}>
+            <ParallaxLayer className='layer'  offset={2} speed={0.6} style={{ zIndex: 5, height: '4px' }}>
               <div className='section-header' id='about'>
                 <h1>About Me</h1>
                 <Breadcrumbs parallax={ref} />  
               </div>
             </ParallaxLayer>
-            <ParallaxLayer className='layer' offset={1.2} speed={0.8} > 
+            <ParallaxLayer className='layer' offset={2.2} speed={0.8} > 
               <Row xxl={2} xl={2} lg={2} md={1} sm={1} xs={1} className='section-content'>
                 <Col xxl={4} xl={6} md={5} sm={9} xs={9} className='section-image'>
                   <img src={BoomBox} fluid='true' alt='Cassette Player Vectors by Vecteezy' />
@@ -52,7 +52,7 @@ const About = ({ parallax }) => {
           </>
       :
         <>
-          <ParallaxLayer className='layer' offset={1} speed={0.6}>
+          <ParallaxLayer className='layer' offset={2} speed={0.6}>
             <div className='section-header' id='about'>
               <h1 onMouseEnter={() => setIsShown(true)}>About Me</h1>
               {isShown &&
@@ -60,7 +60,7 @@ const About = ({ parallax }) => {
               }
             </div>
           </ParallaxLayer>
-          <ParallaxLayer className='layer' offset={1.2} speed={0.8}>
+          <ParallaxLayer className='layer' offset={2.2} speed={0.8}>
             <Row xxl={2} xl={2} lg={2} md={1} sm={1} xs={1} className='section-content'>
                 <Col xxl={4} xl={6} md={5} sm={9} xs={9} className='section-image'>
                   <img src={BoomBox} fluid='true' alt='Cassette Player Vectors by Vecteezy' />

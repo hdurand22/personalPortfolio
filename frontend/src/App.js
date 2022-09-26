@@ -23,8 +23,8 @@ function App() {
     <ScreenSizeContext.Provider value={value}>
           <Parallax ref={parallax} pages={4}>
             <Home parallax={parallax}/>
-            <About parallax={parallax} />
             <Portfolio parallax={parallax}/>
+            <About parallax={parallax} />
             <Contact parallax={parallax} />
           </Parallax>
     </ScreenSizeContext.Provider>

@@ -2,13 +2,13 @@ import React, { useState, useEffect, useRef, useContext } from 'react';
 import { Row } from 'react-bootstrap';
 import Breadcrumbs from './Breadcrumbs';
 import ProjectLogoPopover from './ProjectLogoPopover';
+import ProjectCarousel from './ProjectCarousel';
 import projects from '../projects';
 import { ParallaxLayer } from '@react-spring/parallax';
 import { ScreenSizeContext } from '../App';
 
 const Portfolio = ({ parallax }) => {
   const [isShown, setIsShown] = useState(false);
-  const [showProject, setShowProject] = useState(false); // State for showing project description popover
   const ref = useRef(parallax);
   const { isTabletOrMobile } = useContext(ScreenSizeContext);
 
@@ -31,25 +31,21 @@ const Portfolio = ({ parallax }) => {
     <>
       {isTabletOrMobile ?
         <>
-          <ParallaxLayer className='layer' offset={2} speed={0.6} style={{ zIndex: 2, height: '4px' }}>
+          <ParallaxLayer className='layer' offset={1} speed={0.6} style={{ zIndex: 2, height: '4px' }}>
             <div className='section-header' id='portfolio'>  
               <h1>My Work</h1>
               <Breadcrumbs parallax={ref} />
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={2.15} speed={0.8}>
+          <ParallaxLayer offset={1.15} speed={0.8}>
               <h4 className='section-text'>Check out some of my past and present clients!</h4>
-              <Row xxl={2} xl={2} lg={2} md={1} sm={1} xs={1} className='card-holder'>
-                {projects.map((project, index) => (
-                  <ProjectLogoPopover key={index} project={project} />
-                ))}
-              </Row>
+              <ProjectCarousel className='mobile-carousel' projects={projects} />
               <p className='section-text'>Interested in something a bit more techincal? Check out my <a href='https://github.com/hdurand22'>GitHub page</a>.</p>
           </ParallaxLayer>
         </>
         :
         <>
-          <ParallaxLayer className='layer' offset={2} speed={0.6}>
+          <ParallaxLayer className='layer' offset={1} speed={0.6}>
             <div className='section-header' id='portfolio'>
               <h1 onMouseEnter={() => setIsShown(true)}>My Work</h1>
               {isShown &&
@@ -57,7 +53,7 @@ const Portfolio = ({ parallax }) => {
               }
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={2.15} speed={0.8}>
+          <ParallaxLayer offset={1.15} speed={0.8}>
             <h5 className='section-text'>Check out some of my past and present clients!</h5>
             <div className='card-holder'>
               {projects.map((project, index) => (

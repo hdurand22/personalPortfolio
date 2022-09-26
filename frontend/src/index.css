@@ -133,7 +133,7 @@
   }
   
   .layer {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 100%;
     width: 100%;
   }
@@ -236,7 +236,7 @@
     display: flex;
     justify-content: space-between;
     width: 50rem;
-    background: none;
+    background: hsla(160,13%,95%,0.75);
   }
 
   .nav-option {
@@ -314,6 +314,25 @@
     opacity: 1;
   }
 
+  .carousel {
+    height: 50%;
+  }
+
+  .carousel-item {
+    height: 100%;
+    width: 100%;
+  }
+
+  .carousel-item.active, .carousel-item-next, .carousel-item-prev {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slide {
+    display: flex;
+  }
+
   /* Wide */
 
   @media screen and (min-width: 961px) and (max-width: 2500px) {
@@ -340,7 +359,7 @@
       }
 
       .me-auto.navbar-nav {
-        background: none;
+        background: hsla(160,13%,95%,0.75);
       }
 
       .nav-option {
@@ -408,7 +427,7 @@
       }
 
       .me-auto.navbar-nav {
-        background: none;
+        background: hsla(160,13%,95%,0.75);
       }
 
       .nav-option {
@@ -439,6 +458,10 @@
       .section-image > img {
         margin: 0px;
         height: 40vh;
+        width: auto;
+      }
+
+      .project-circle {
         width: auto;
       }
 
@@ -544,6 +567,10 @@
         width: auto;
       }
 
+      .project-circle {
+        width: auto;
+      }
+
   }
 
   /* Mobile */
@@ -578,7 +605,7 @@
       }
 
       .me-auto.navbar-nav {
-        background: none;
+        background: hsla(160,13%,95%,0.75);
       }
 
       .nav-option {
@@ -632,6 +659,10 @@
       .section-image > img {
         margin: 0px;
         height: 25vh;
+        width: auto;
+      }
+
+      .project-circle {
         width: auto;
       }
 
@@ -708,9 +739,13 @@
       padding: 5px;
     }
     
-      #email-form > h3{
-        font-size: 1.2em;
-      }
+    #email-form > h3{
+      font-size: 1.2em;
+    }
+
+    .project-circle {
+      width: auto;
+    }
   }
 
   @media screen and (max-width: 360px)  {
@@ -764,7 +799,7 @@
       }
 
       .me-auto.navbar-nav {
-        background: none;
+        background: hsla(160,13%,95%,0.75);
       }
 
       .nav-option {
@@ -807,6 +842,10 @@
       width: 100%;
       padding: 5px;
       margin: 5px;
+    }
+
+    .project-circle {
+      width: auto;
     }
     
   }

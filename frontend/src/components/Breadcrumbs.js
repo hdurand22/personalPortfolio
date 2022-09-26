@@ -21,10 +21,10 @@ const Breadcrumbs = ({ setIsShown, parallax }) => {
                     Home
                 </BreadcrumbItem>
                 <BreadcrumbItem linkAs='h3' onClick={() => ref.scrollTo(1)}>
-                    About Me
+                    My Work
                 </BreadcrumbItem>
                 <BreadcrumbItem linkAs='h3' onClick={() => ref.scrollTo(2)}>
-                    My Work
+                    About Me
                 </BreadcrumbItem>
                 <BreadcrumbItem linkAs='h3' onClick={() => ref.scrollTo(3)}>
                     Contact
@@ -36,8 +36,8 @@ const Breadcrumbs = ({ setIsShown, parallax }) => {
                 <Navbar.Collapse id='responsive-navbar-nav'>
                     <Nav className='me-auto'>
                             <h3 className='nav-option' onClick={() => handleSelect(0)}>Home</h3>
-                            <h3 className='nav-option' onClick={() => handleSelect(1)}>About Me</h3>
-                            <h3 className='nav-option' onClick={() => handleSelect(2)}>My Work</h3>
+                            <h3 className='nav-option' onClick={() => handleSelect(1)}>My Work</h3>
+                            <h3 className='nav-option' onClick={() => handleSelect(2)}>About Me</h3>
                             <h3 className='nav-option' onClick={() => handleSelect(3)}>Contact</h3>
                     </Nav>
                 </Navbar.Collapse>

@@ -7,13 +7,24 @@ const ProjectLogoPopover = ({ project }) => {
         <Popover id='popover-basic'>
             <Popover.Header as='h3'>{project.title}</Popover.Header>
             <Popover.Body>
-                {project.description}
+                <p>{project.description}</p>
+                <p>
+                    <a 
+                        className='btn btn-outline-secondary' 
+                        href={project.siteLink} 
+                        role='button' 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
+                        Check out this project!
+                    </a>
+                </p>
             </Popover.Body>
         </Popover>
     )
 
     return (
-        <OverlayTrigger trigger='click' placement='auto-start' overlay={popover}>
+        <OverlayTrigger trigger='click' rootClose={true} placement='auto-start' overlay={popover}>
             <Image roundedCircle={true} src={project.image} className='project-circle'/>
         </OverlayTrigger>
     )
