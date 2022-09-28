@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { useSpring } from 'react-spring';
 
-const useAnimatedPath = ({ toggle, delay }) => {
+const useAnimatedPath = ({ toggle }) => {
     const [length, setLength] = useState(null); // For measuring length of path and updating it as it gets animated
     const animatedStyle = useSpring({
-        strokeDashoffset: toggle ? 0 : length,
         strokeDasharray: length,
-        delay: delay ? delay : 0,
+        strokeDashoffset: toggle ? 0 : length,
+        // delay: delay ? delay : 0,
+        // opacity: toggle ? 1 : 0,
         config: { tension: 4, friction: 0.5, clamp: true }
     });
 

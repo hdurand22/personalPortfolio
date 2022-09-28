@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import FloatingBox1 from "./FloatingBox1";
 import FloatingBox2 from "./FloatingBox2";
 import FloatingBox3 from "./FloatingBox3";
@@ -11,12 +11,13 @@ import TextLine3 from "./TextLine3";
 import TextLine4 from "./TextLine4";
 import IconPCLogo from "./IconPCLogo";
 import { useSprings, animated } from "react-spring";
+import useAnimatedPath from "../hooks/useAnimatedPath";
 
 function Icon({ toggle }) {
 
     // Animations for boxes
     const floatingBoxes = [
-        <FloatingBox1 key="box1" toggle={toggle} delay={500} />,
+        <FloatingBox1 key="box1" />,
         <FloatingBox2 key="box2" />,
         <FloatingBox3 key="box3" />
     ]
@@ -27,7 +28,7 @@ function Icon({ toggle }) {
             return {
                 transform: toggle ? `translate3d(0px, 0px, 0px)` : `translate3d(-400px, 0px, 0px)`,
                 opacity: toggle ? 1 : 0,
-                delay: i * 100
+                delay: i * 100,
             }
         })
     );
@@ -95,11 +96,11 @@ function Icon({ toggle }) {
   
     return (
         <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="1019.484"
-        height="436.681"
-        data-name="Layer 1"
-        viewBox="0 0 1019.484 436.681"
+            xmlns="http://www.w3.org/2000/svg"
+            width="1019.484"
+            height="436.681"
+            data-name="Layer 1"
+            viewBox="0 0 1019.484 436.681"
         >
             <path
                 fill="#ffb9b9"

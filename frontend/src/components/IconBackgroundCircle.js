@@ -7,15 +7,15 @@ const IconBackgroundCircle = ({ toggle, delay }) => {
 
   return (
     <g>
-        <animated.circle
-          {...animationProps}
-          stroke="#47f4ad"
-          strokeWidth="10"
-          cx="428.058" 
-          cy="298.224" 
-          r="60.307" 
-          fill="#47f4ad"
-        />
+      <animated.circle
+        {...animationProps}
+        stroke="#47f4ad"
+        strokeWidth="10"
+        cx="428.058" 
+        cy="298.224" 
+        r="60.307" 
+        fill="#47f4ad"
+      />
     </g>
   )
 }
