@@ -5,7 +5,7 @@ import { ScreenSizeContext } from '../App';
 
 
 const Heading = ({parallax}) => {
-    const [isShown, setIsShown] = useState(false);
+    const [isShown, setIsShown] = useState(true);
     const { isTabletOrMobile } = useContext(ScreenSizeContext);
 
     useEffect(() => {

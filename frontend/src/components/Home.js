@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Fade } from 'react-reveal';
 import { ParallaxLayer } from '@react-spring/parallax';
 import { TransitionGroup } from 'react-transition-group';
 import Heading from './Heading';
 import Computer from '../assets/computer.png';
+import Icon from './Icon';
 
 const Home = ({ parallax }) => {
+    
+    const [toggle, setToggle] = useState(false);
     
     return (
         <div id='home'>
@@ -24,11 +27,13 @@ const Home = ({ parallax }) => {
                 left
                 appear={true}
                 duration={1250}
-                timeout={1250}
+                wait={1250}
+                onReveal={() => setToggle(true)}
             >
                 <ParallaxLayer className='layer' offset={0} speed={0.8}>
                     <div className='image-flex'>
-                        <img id='splash-computer' src={Computer} alt='Cassette Player Vectors by Vecteezy' />
+                        {/* <img id='splash-computer' src={Computer} alt='Cassette Player Vectors by Vecteezy' /> */}
+                        <Icon toggle={toggle} />
                     </div>
                 </ParallaxLayer>
             </Fade>

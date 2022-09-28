@@ -1,7 +1,7 @@
   * {
     margin-top: 0px;
-    background-color: #F2F5F4;
-    color: #424242;
+    background-color: #F2E6D8;
+    color: rgb(54, 54, 54);
     font-family: 'Fanwood Text', serif;
   }
 
@@ -13,6 +13,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Tenor Sans', sans-serif;
+    color: #E47C5B;
   }
 
   code {
