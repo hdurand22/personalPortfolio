@@ -237,7 +237,7 @@
     display: flex;
     justify-content: space-between;
     width: 50rem;
-    background: hsla(160,13%,95%,0.75);
+    background: hsla(32,50%,90%,0.75);
   }
 
   .nav-option {
@@ -360,7 +360,7 @@
       }
 
       .me-auto.navbar-nav {
-        background: hsla(160,13%,95%,0.75);
+        background: hsla(32,50%,90%,0.75);
       }
 
       .nav-option {
@@ -428,7 +428,7 @@
       }
 
       .me-auto.navbar-nav {
-        background: hsla(160,13%,95%,0.75);
+        background: hsla(32,50%,90%,0.75);
       }
 
       .nav-option {
@@ -606,7 +606,7 @@
       }
 
       .me-auto.navbar-nav {
-        background: hsla(160,13%,95%,0.75);
+        background: hsla(32,50%,90%,0.75);
       }
 
       .nav-option {
@@ -800,7 +800,7 @@
       }
 
       .me-auto.navbar-nav {
-        background: hsla(160,13%,95%,0.75);
+        background: hsla(32,50%,90%,0.75);
       }
 
       .nav-option {

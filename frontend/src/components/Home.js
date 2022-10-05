@@ -3,8 +3,7 @@ import { Fade } from 'react-reveal';
 import { ParallaxLayer } from '@react-spring/parallax';
 import { TransitionGroup } from 'react-transition-group';
 import Heading from './Heading';
-import Computer from '../assets/computer.png';
-import Icon from './Icon';
+import HomeIcon from './HomeIcon';
 
 const Home = ({ parallax }) => {
     
@@ -32,8 +31,7 @@ const Home = ({ parallax }) => {
             >
                 <ParallaxLayer className='layer' offset={0} speed={0.8}>
                     <div className='image-flex'>
-                        {/* <img id='splash-computer' src={Computer} alt='Cassette Player Vectors by Vecteezy' /> */}
-                        <Icon toggle={toggle} />
+                        <HomeIcon toggle={toggle} />
                     </div>
                 </ParallaxLayer>
             </Fade>
