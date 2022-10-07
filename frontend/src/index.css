@@ -463,7 +463,7 @@
       }
 
       .project-circle {
-        width: auto;
+        width: calc(25% + 10px);
       }
 
   }
