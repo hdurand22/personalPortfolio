@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
-import { Row } from 'react-bootstrap';
 import Breadcrumbs from './Breadcrumbs';
 import ProjectLogoPopover from './ProjectLogoPopover';
-import ProjectCarousel from './ProjectCarousel';
+import ProjectLogoCarousel from './ProjectLogoCarousel';
 import projects from '../projects';
+import projectCarouselImages from '../projectCarouselImages'
 import { ParallaxLayer } from '@react-spring/parallax';
 import { ScreenSizeContext } from '../App';
+import ProjectImageCarousel from './ProjectImageCarousel';
 
 const Portfolio = ({ parallax }) => {
   const [isShown, setIsShown] = useState(false);
@@ -38,8 +39,9 @@ const Portfolio = ({ parallax }) => {
             </div>
           </ParallaxLayer>
           <ParallaxLayer offset={1.15} speed={0.8}>
+              <ProjectImageCarousel className='mobile-carousel' projectCarouselImages={projectCarouselImages} />
               <h4 className='section-text'>Check out some of my past and present clients!</h4>
-              <ProjectCarousel className='mobile-carousel' projects={projects} />
+              <ProjectLogoCarousel className='mobile-carousel' projects={projects} />
               <p className='section-text'>Interested in something a bit more techincal? Check out my <a href='https://github.com/hdurand22'>GitHub page</a>.</p>
           </ParallaxLayer>
         </>
@@ -54,6 +56,7 @@ const Portfolio = ({ parallax }) => {
             </div>
           </ParallaxLayer>
           <ParallaxLayer offset={1.15} speed={0.8}>
+          <ProjectImageCarousel projectCarouselImages={projectCarouselImages} />
             <h5 className='section-text'>Check out some of my past and present clients!</h5>
             <div className='card-holder'>
               {projects.map((project, index) => (

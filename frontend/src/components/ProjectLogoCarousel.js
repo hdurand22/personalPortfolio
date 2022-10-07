@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import ProjectLogoPopover from './ProjectLogoPopover';
 
-const ProjectCarousel = ({ projects }) => {
+const ProjectLogoCarousel = ({ projects }) => {
   return (
     <Carousel 
         controls={false}
@@ -18,4 +18,4 @@ const ProjectCarousel = ({ projects }) => {
   )
 }
 
-export default ProjectCarousel
+export default ProjectLogoCarousel
