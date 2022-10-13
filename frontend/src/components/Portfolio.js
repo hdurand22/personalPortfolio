@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
+import { Row } from 'react-bootstrap';
 import Breadcrumbs from './Breadcrumbs';
 import ProjectLogoPopover from './ProjectLogoPopover';
 import ProjectLogoCarousel from './ProjectLogoCarousel';
@@ -39,7 +40,9 @@ const Portfolio = ({ parallax }) => {
             </div>
           </ParallaxLayer>
           <ParallaxLayer offset={1.15} speed={0.8}>
+            <Row>
               <ProjectImageCarousel className='mobile-carousel' projectCarouselImages={projectCarouselImages} />
+            </Row>
               <h4 className='section-text'>Check out some of my past and present clients!</h4>
               <ProjectLogoCarousel className='mobile-carousel' projects={projects} />
               <p className='section-text'>Interested in something a bit more techincal? Check out my <a href='https://github.com/hdurand22'>GitHub page</a>.</p>
@@ -55,8 +58,10 @@ const Portfolio = ({ parallax }) => {
               }
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={1.15} speed={0.8}>
-          <ProjectImageCarousel projectCarouselImages={projectCarouselImages} />
+          <ParallaxLayer className='layer' offset={1.15} speed={0.8}>
+            <Row>
+              <ProjectImageCarousel projectCarouselImages={projectCarouselImages} />
+            </Row>
             <h5 className='section-text'>Check out some of my past and present clients!</h5>
             <div className='card-holder'>
               {projects.map((project, index) => (

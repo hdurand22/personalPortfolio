@@ -6,6 +6,18 @@ const projectCarouselImages = [
     siteLink: 'https://www.sessions.blue/'
   },
   {
+    title: 'Blue Dot Stem Editor',
+    description: 'Blue Dot track library',
+    image: require('./assets/SongList.png'),
+    siteLink: 'https://www.sessions.blue/'
+  },
+  {
+    title: 'Custom Back In Stock Notifications',
+    description: 'I wrote a custom script for integrating the WooCommerce eCommerce plugin and Klaviyo CRM to enable back in stock email notifications',
+    image: require('./assets/RE_BIS.png'),
+    siteLink: ''
+  },
+  {
     title: 'eCommerce Mock-Up',
     description: 'I built an entire eCommerce site from the ground up, featuring user account creation, a fully-functional cart, PayPal integration, and an admin area',
     image: require('./assets/eCommerceMainPage.png'),
@@ -13,14 +25,8 @@ const projectCarouselImages = [
   },
   {
     title: 'eCommerce Mock-Up',
-    description: 'eCommerce checkout featuring PayPal integration',
+    description: 'Custom eCommerce checkout page featuring PayPal integration',
     image: require('./assets/eCommerceCheckoutScreen.png'),
-    siteLink: ''
-  },
-  {
-    title: 'eCommerce Mock-Up',
-    description: 'eCommerce product page',
-    image: require('./assets/eCommerceProductPage.png'),
     siteLink: ''
   },
 ]
