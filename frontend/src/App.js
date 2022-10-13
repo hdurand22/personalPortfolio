@@ -1,4 +1,8 @@
 import React, { useRef, createContext, useMemo } from 'react';
+import './fonts/QanelasSoftExtraBold.otf';
+import './fonts/QanelasSoftMedium.woff';
+import './fonts/QanelasSoftRegular.woff';
+import './fonts/QanelasSoftUltraLight.otf';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Parallax } from '@react-spring/parallax';
 import About from './components/About';

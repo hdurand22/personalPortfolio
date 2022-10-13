@@ -5,6 +5,7 @@ const ProjectImageCarousel = ({ projectCarouselImages }) => {
   const popover = (image) => {
       return (
         <Popover id='popover-basic'>
+            <Popover.Header>{image.title}</Popover.Header>
             <Popover.Body>
                 <p>{image.description}</p>
             </Popover.Body>

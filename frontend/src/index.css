@@ -1,18 +1,42 @@
+  @font-face {
+    font-family: 'QanelasSoftExtraBold';
+    src: local('QanelasSoftExtraBold'), url('./fonts/QanelasSoftExtraBold.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'QanelasSoftMedium';
+    src: local('QanelasSoftMedium'), url('./fonts/QanelasSoftMedium.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'QanelasSoftRegular';
+    src: local('QanelasSoftRegular'), url('./fonts/QanelasSoftRegular.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'QanelasSoftUltraLight';
+    src: local('QanelasSoftUltraLight'), url('./fonts/QanelasSoftUltraLight.otf') format('opentype');
+  }
+
   * {
     margin-top: 0px;
     background-color: #F2E6D8;
     color: rgb(54, 54, 54);
-    font-family: 'Fanwood Text', serif;
+    font-family: QanelasSoftRegular;
   }
+
 
   body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: QanelasSoftRegular;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Tenor Sans', sans-serif;
+  h1 {
+    font-family: QanelasSoftExtraBold;
+    color: #E47C5B;
+  }
+  
+  h2, h3, h4, h5, h6 {
+    font-family: QanelasSoftMedium;
     color: #E47C5B;
   }
 
