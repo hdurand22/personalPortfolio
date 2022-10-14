@@ -7,6 +7,7 @@ import AboutIcon from './AboutIcon';
 
 const About = ({ parallax }) => {
   const [isShown, setIsShown] = useState(false);
+  const [readMore, setReadMore] = useState(false);
   const ref = useRef(parallax);
   const { isTabletOrMobile } = useContext(ScreenSizeContext);
 
@@ -38,16 +39,33 @@ const About = ({ parallax }) => {
             <ParallaxLayer className='layer' offset={2.2} speed={0.8} > 
               <Row xxl={2} xl={2} lg={2} md={1} sm={1} xs={1} className='section-content'>
                 <Col xxl={4} xl={6} md={5} sm={9} xs={9} className='section-image'>
-                  <AboutIcon />
+                  <AboutIcon id='about-icon' height={200} />
                 </Col>
                 <Col xxl={6} xl={10} lg={11} md={11} sm={11} xs={11} className='section-text'>
-                  <h4 className='section-text'>Looking to get online and build your brand? Want a cool new feature for your already awesome website? No matter what stage your business is at, Durand Enterprises has got you covered.</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem viverra aliquet eget sit amet tellus. Posuere lorem ipsum dolor sit amet consectetur adipiscing. Quam lacus suspendisse faucibus interdum posuere. Ut sem viverra aliquet eget. Quis varius quam quisque id diam. Fames ac turpis egestas integer eget aliquet. Nisi vitae suscipit tellus mauris a diam maecenas. Nisi scelerisque eu ultrices vitae auctor eu augue. Faucibus vitae aliquet nec ullamcorper sit amet risus. Tortor condimentum lacinia quis vel eros donec ac.
-
-                  Nunc scelerisque viverra mauris in aliquam sem. Faucibus turpis in eu mi. Nullam eget felis eget nunc lobortis mattis aliquam faucibus purus. Sit amet commodo nulla facilisi. Et netus et malesuada fames ac turpis egestas sed tempus. Mauris vitae ultricies leo integer. Amet commodo nulla facilisi nullam. Gravida quis blandit turpis cursus. Neque convallis a cras semper auctor neque vitae tempus quam. Odio facilisis mauris sit amet massa vitae tortor condimentum. Maecenas pharetra convallis posuere morbi. Egestas quis ipsum suspendisse ultrices. Orci nulla pellentesque dignissim enim sit amet venenatis.
-
-                  Ultricies mi eget mauris pharetra et ultrices. Placerat orci nulla pellentesque dignissim enim sit. Magna eget est lorem ipsum dolor sit amet consectetur adipiscing. Lectus urna duis convallis convallis tellus. Venenatis lectus magna fringilla urna. Lorem donec massa sapien faucibus et molestie ac feugiat sed. Mauris nunc congue nisi vitae suscipit. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Diam quis enim lobortis scelerisque fermentum dui faucibus. Pulvinar proin gravida hendrerit lectus. Imperdiet massa tincidunt nunc pulvinar. Volutpat odio facilisis mauris sit. Ultricies mi eget mauris pharetra et ultrices neque ornare. Tellus mauris a diam maecenas. Nisi vitae suscipit tellus mauris a diam maecenas.</p>
-                  </Col>
+                  {!readMore && 
+                    <>
+                      <h4>Looking to get online and build your brand? Want a cool new feature for your already awesome website? No matter what stage your business is at, Durand Enterprises has got you covered.</h4>
+                      <br/>
+                    </>
+                  }
+                  {readMore ? <h5 onClick={() => setReadMore(!readMore)}>Read Less...</h5> : <h5 onClick={() => setReadMore(!readMore)}>Read More...</h5> }
+                  {readMore && 
+                    <>
+                      <p>Durand Enterprises was started to give Hayden Durand - founder, owner, and sole employee - the opportunity to work with a wide variety of clients and help them bring their visions to life. Hayden specializes in full-stack web development and design, as well as digital marketing, including email marketing, social advertising, and search engine optimization. Through meticulous planning, thoughtful design, and innovative development, Hayden delivers high-quality websites and web applications to every client on his roster.</p>
+                      <p>Hayden’s philosophy is to utilize everything at his disposal and not reinvent the wheel. He is a passionate and seasoned JavaScript developer who loves to create custom solutions when the need arises, but he also recognizes that web content management systems, like WordPress, will often meet his clients’ objectives. Regardless of the project, Hayden will work with his clients to determine the ideal approach and mix of technologies for success.</p>
+                      <h5>Technologies I Use:</h5>
+                      <ul>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>WordPress</li>
+                        <li>HTML/CSS</li>
+                        <li>Express</li>
+                        <li>MongoDB</li>
+                        <li>SQL</li>
+                      </ul>
+                    </>
+                  }
+                </Col>
               </Row>
             </ParallaxLayer>
           </>

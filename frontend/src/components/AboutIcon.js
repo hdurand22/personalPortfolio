@@ -1,11 +1,11 @@
 import React from "react";
 
-function AboutIcon() {
+function AboutIcon({height}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="100%"
-      height="558.147"
+      height={height ? height : 558.147}
       data-name="Layer 1"
       viewBox="0 0 751.155 558.147"
     >

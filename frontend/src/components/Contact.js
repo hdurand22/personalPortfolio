@@ -117,7 +117,7 @@ const Contact = ({ parallax }) => {
                 <ParallaxLayer className='layer' offset={3.2} speed={0.8}>
                     <Row xxl={2} xl={2} lg={2} md={1} sm={1} xs={1} className='section-content'>
                         <Col xxl={4} xl={4} lg={4} md={5} sm={7} xs={7} className='section-image'>
-                            <ContactIcon />
+                            <ContactIcon height={200} />
                         </Col>
                         <Col xxl={6} xl={6} lg={7} md={11} sm={11} xs={10} className='section-text'>
                             <Form id='email-form' onSubmit={handleSubmit}>

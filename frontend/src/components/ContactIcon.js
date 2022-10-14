@@ -1,11 +1,11 @@
 import React from "react";
 
-function ContactIcon() {
+function ContactIcon({height}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="100%"
-      height="469.17"
+      height={height ? height : 469.17}
       data-name="Layer 1"
       viewBox="0 0 912.67 469.17"
     >
