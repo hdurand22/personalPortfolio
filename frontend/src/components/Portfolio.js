@@ -35,7 +35,7 @@ const Portfolio = ({ parallax }) => {
         <>
           <ParallaxLayer className='layer' offset={1} speed={0.6} style={{ zIndex: 2, height: '4px' }}>
             <div className='section-header' id='portfolio'>  
-              <h1>My Work</h1>
+              <h1>Our Work</h1>
               <Breadcrumbs parallax={ref} />
             </div>
           </ParallaxLayer>
@@ -54,7 +54,7 @@ const Portfolio = ({ parallax }) => {
         <>
           <ParallaxLayer className='layer' offset={1} speed={0.6}>
             <div className='section-header' id='portfolio'>
-              <h1 onMouseEnter={() => setIsShown(true)}>My Work</h1>
+              <h1 onMouseEnter={() => setIsShown(true)}>Our Work</h1>
               {isShown &&
                 <Breadcrumbs setIsShown={setIsShown} parallax={ref} />
               }

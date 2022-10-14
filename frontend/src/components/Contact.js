@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import { ParallaxLayer } from '@react-spring/parallax';
 import axios from 'axios';
-import { Row, Col, FormControl, FormGroup, Form, Button } from 'react-bootstrap';
+import { Row, Col, FormControl, FormGroup, Form } from 'react-bootstrap';
 import Breadcrumbs from './Breadcrumbs';
 import { ScreenSizeContext } from '../App';
 import ContactIcon from './ContactIcon';
@@ -17,7 +17,7 @@ const Contact = ({ parallax }) => {
         subject: 'Contact from personal website',
         message: ''
     });
-    const [status, setStatus] = useState('Submit');
+    const [status, setStatus] = useState(null);
     const [emailError, setEmailError] = useState(null);
     const [nameError, setNameError] = useState(null);
     const [messageError, setMessageError] = useState(null);
@@ -124,7 +124,7 @@ const Contact = ({ parallax }) => {
                                 <h3>Get in touch with me!</h3>
                                 <FormGroup className='mb-3' controlId='contactName'>
                                     <Form.Label>Name</Form.Label>
-                                    <FormControl type='text' name='name' placeholder='Enter your full name' value={inputs.name} onChange={handleChange} />
+                                    <FormControl type='text' name='name' placeholder='Enter your name' value={inputs.name} onChange={handleChange} />
                                     {nameError && <p style={{color: 'red'}}>{nameError}</p>}
                                 </FormGroup>
                                 <FormGroup className='mb-3' controlId='contactEmail'>
@@ -137,7 +137,7 @@ const Contact = ({ parallax }) => {
                                     <FormControl as='textarea' name='message' rows={4} value={inputs.message} onChange={handleChange}/>
                                     {messageError && <p style={{color: 'red'}}>{messageError}</p>}
                                 </FormGroup>
-                                <Button type='submit'>{status}</Button>
+                                <button type='submit' style={{backgroundColor: "#46F4AC"}}>Submit</button>
                             </Form>
                         </Col>
                     </Row>
@@ -159,11 +159,15 @@ const Contact = ({ parallax }) => {
                             <ContactIcon />
                         </Col>
                         <Col xxl={6} xl={6} lg={7} md={11} sm={11} xs={10} className='section-text'>
+                            {/* {status === 'Submit' ? 
+                            
+                            
+                            } */}
                             <Form id='email-form' onSubmit={handleSubmit}>
                                 <h3>Get in touch with me!</h3>
                                 <FormGroup className='mb-3' controlId='contactName'>
                                     <Form.Label>Name</Form.Label>
-                                    <FormControl type='text' name='name' placeholder='Enter your full name' value={inputs.name} onChange={handleChange} />
+                                    <FormControl type='text' name='name' placeholder='Enter your name' value={inputs.name} onChange={handleChange} />
                                     {nameError && <p style={{color: 'red'}}>{nameError}</p>}
                                 </FormGroup>
                                 <FormGroup className='mb-3' controlId='contactEmail'>
@@ -176,7 +180,7 @@ const Contact = ({ parallax }) => {
                                     <FormControl as='textarea' name='message' rows={4} value={inputs.message} onChange={handleChange}/>
                                     {messageError && <p style={{color: 'red'}}>{messageError}</p>}
                                 </FormGroup>
-                                <Button type='submit'>{status}</Button>
+                                <button type='submit' style={{backgroundColor: "#46F4AC"}}>Submit</button>
                             </Form>
                         </Col>
                     </Row>

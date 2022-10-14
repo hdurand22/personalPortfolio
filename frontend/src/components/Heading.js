@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Image } from 'react-bootstrap';
 import DropdownMenu from './DropdownMenu';
+import Logo from '../assets/DE_Logo_expanded.png';
 import { ScreenSizeContext } from '../App';
 
 
@@ -26,7 +27,7 @@ const Heading = ({parallax}) => {
         <>
             { !isTabletOrMobile ?
                 <header id='main-hover-menu'>
-                    <h1 id='de-header-text' onMouseEnter={() => setIsShown(true)}>durand enterprises</h1>
+                    <Image id='de-logo' onMouseEnter={() => setIsShown(true)} src={Logo} />
                     {isShown &&
                         <DropdownMenu setIsShown={setIsShown} parallax={parallax} />
                     }
@@ -36,7 +37,7 @@ const Heading = ({parallax}) => {
                 <header id='main-hover-menu'>
                     <DropdownMenu parallax={parallax} />
                     <Container>
-                        <h1 id='de-header-text'>durand enterprises</h1>
+                        <Image src={Logo} />
                         <h3 id='home-subtitle'>Custom Web Development and Tech Consulting</h3>
                     </Container>
                 </header>

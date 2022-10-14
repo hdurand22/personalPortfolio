@@ -32,7 +32,7 @@ const About = ({ parallax }) => {
           <>
             <ParallaxLayer className='layer'  offset={2} speed={0.6} style={{ zIndex: 5, height: '4px' }}>
               <div className='section-header' id='about'>
-                <h1>About Me</h1>
+                <h1>About Us</h1>
                 <Breadcrumbs parallax={ref} />  
               </div>
             </ParallaxLayer>
@@ -53,7 +53,7 @@ const About = ({ parallax }) => {
                     <>
                       <p>Durand Enterprises was started to give Hayden Durand - founder, owner, and sole employee - the opportunity to work with a wide variety of clients and help them bring their visions to life. Hayden specializes in full-stack web development and design, as well as digital marketing, including email marketing, social advertising, and search engine optimization. Through meticulous planning, thoughtful design, and innovative development, Hayden delivers high-quality websites and web applications to every client on his roster.</p>
                       <p>Hayden’s philosophy is to utilize everything at his disposal and not reinvent the wheel. He is a passionate and seasoned JavaScript developer who loves to create custom solutions when the need arises, but he also recognizes that web content management systems, like WordPress, will often meet his clients’ objectives. Regardless of the project, Hayden will work with his clients to determine the ideal approach and mix of technologies for success.</p>
-                      <h5>Technologies I Use:</h5>
+                      <h5>Technologies We Use:</h5>
                       <ul>
                         <li>JavaScript</li>
                         <li>React</li>
@@ -73,7 +73,7 @@ const About = ({ parallax }) => {
         <>
           <ParallaxLayer className='layer' offset={2} speed={0.6}>
             <div className='section-header' id='about'>
-              <h1 onMouseEnter={() => setIsShown(true)}>About Me</h1>
+              <h1 onMouseEnter={() => setIsShown(true)}>About Us</h1>
               {isShown &&
                 <Breadcrumbs setIsShown={setIsShown} parallax={ref} />
               }
@@ -89,7 +89,7 @@ const About = ({ parallax }) => {
                 <br/>
                 <p>Durand Enterprises was started to give Hayden Durand - founder, owner, and sole employee - the opportunity to work with a wide variety of clients and help them bring their visions to life. Hayden specializes in full-stack web development and design, as well as digital marketing, including email marketing, social advertising, and search engine optimization. Through meticulous planning, thoughtful design, and innovative development, Hayden delivers high-quality websites and web applications to every client on his roster.</p>
                 <p>Hayden’s philosophy is to utilize everything at his disposal and not reinvent the wheel. He is a passionate and seasoned JavaScript developer who loves to create custom solutions when the need arises, but he also recognizes that web content management systems, like WordPress, will often meet his clients’ objectives. Regardless of the project, Hayden will work with his clients to determine the ideal approach and mix of technologies for success.</p>
-                <h5>Technologies I Use:</h5>
+                <h5>Technologies We Use:</h5>
                 <ul>
                   <li>JavaScript</li>
                   <li>React</li>

@@ -202,8 +202,9 @@
     width: 50vw;
   }
 
-  #de-header-text {
+  #de-logo {
     margin-bottom: 15px;
+    width: auto;
   }
 
   #main-hover-menu {
