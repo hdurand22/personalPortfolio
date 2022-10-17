@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { animated, useSpring } from 'react-spring';
 import { ParallaxLayer } from '@react-spring/parallax';
 import Heading from './Heading';
+import DropdownMenu from './DropdownMenu';
 
 const Home = ({ parallax }) => {
     
@@ -15,14 +16,34 @@ const Home = ({ parallax }) => {
         transform: toggle ? `translate3d(0px, 0px, 0px)` : `translate3d(400px, 0px, 0px)`,
         opacity: toggle ? 1 : 0,
         delay: 500
+    });
+
+    const subheadingSpring = useSpring({
+        transform: toggle ? `translate3d(0px, 0px, 0px)` : `translate3d(-400px, 0px, 0px)`,
+        opacity: toggle ? 1 : 0,
+        delay: 1000
+    })
+
+    const menuSpring = useSpring({
+        // transform: toggle ? `translate3d(0px, 0px, 0px)` : `translate3d(400px, 0px, 0px)`,
+        opacity: toggle ? 1 : 0,
+        delay: 1750
     })
     
     return (
-        <animated.div style={logoSpring} id='home'>
-            <ParallaxLayer className='layer' offset={0} speed={0.8}>
-                <Heading parallax={parallax} />
-            </ParallaxLayer>
-        </animated.div>
+        <>
+            <animated.div style={logoSpring} id='home'>
+                <ParallaxLayer className='layer' offset={0} speed={0.8}>
+                    <Heading />
+                    <animated.div style={subheadingSpring} offset={0.8} speed={0.8}>
+                        <h2 id='subheader'>Custom Web Development and Tech Consulting</h2>
+                    </animated.div>
+                    <animated.div style={menuSpring}>
+                        <DropdownMenu parallax={parallax} />
+                    </animated.div>
+                </ParallaxLayer>
+            </animated.div>
+        </>
     )
 
 

@@ -17,16 +17,16 @@ const Breadcrumbs = ({ setIsShown, parallax }) => {
         <>
         {!isTabletOrMobile ?
             <Breadcrumb onMouseLeave={() => setIsShown(false)} id='breadcrumb-container'>
-                <BreadcrumbItem linkAs='h3' onClick={() => ref.scrollTo(0)}>
+                <BreadcrumbItem className='floating-link' linkAs='h3' onClick={() => ref.scrollTo(0)}>
                     Home
                 </BreadcrumbItem>
-                <BreadcrumbItem linkAs='h3' onClick={() => ref.scrollTo(1)}>
-                    My Work
+                <BreadcrumbItem className='floating-link' linkAs='h3' onClick={() => ref.scrollTo(1)}>
+                    Our Work
                 </BreadcrumbItem>
-                <BreadcrumbItem linkAs='h3' onClick={() => ref.scrollTo(2)}>
-                    About Me
+                <BreadcrumbItem className='floating-link' linkAs='h3' onClick={() => ref.scrollTo(2)}>
+                    About Us
                 </BreadcrumbItem>
-                <BreadcrumbItem linkAs='h3' onClick={() => ref.scrollTo(3)}>
+                <BreadcrumbItem className='floating-link' linkAs='h3' onClick={() => ref.scrollTo(3)}>
                     Contact
                 </BreadcrumbItem>
             </Breadcrumb>
@@ -36,8 +36,8 @@ const Breadcrumbs = ({ setIsShown, parallax }) => {
                 <Navbar.Collapse id='responsive-navbar-nav'>
                     <Nav className='me-auto'>
                             <h3 className='nav-option' onClick={() => handleSelect(0)}>Home</h3>
-                            <h3 className='nav-option' onClick={() => handleSelect(1)}>My Work</h3>
-                            <h3 className='nav-option' onClick={() => handleSelect(2)}>About Me</h3>
+                            <h3 className='nav-option' onClick={() => handleSelect(1)}>Our Work</h3>
+                            <h3 className='nav-option' onClick={() => handleSelect(2)}>About Us</h3>
                             <h3 className='nav-option' onClick={() => handleSelect(3)}>Contact</h3>
                     </Nav>
                 </Navbar.Collapse>

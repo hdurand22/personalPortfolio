@@ -1,44 +1,23 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import { Container, Image } from 'react-bootstrap';
-import DropdownMenu from './DropdownMenu';
 import Logo from '../assets/DE_Logo_expanded.png';
 import { ScreenSizeContext } from '../App';
 
 
-const Heading = ({parallax }) => {
-    const [isShown, setIsShown] = useState(true);
+const Heading = () => {
+
     const { isTabletOrMobile } = useContext(ScreenSizeContext);
-
-    useEffect(() => {
-        const mouseLeaveEvent = (e) => {
-            e.preventDefault();
-        }
-
-        // If dropdown is open, listen for mouse hovering out of area
-        if (isShown) {
-            window.addEventListener('mouseover', mouseLeaveEvent);
-        }
-        return () => {
-            window.removeEventListener('mouseover', mouseLeaveEvent);
-        }
-    }, [isShown]);
 
     return (
         <>
             { !isTabletOrMobile ?
                 <header id='main-hover-menu'>
-                    <Image id='de-logo' onMouseEnter={() => setIsShown(true)} src={Logo} />
-                    {isShown &&
-                        <DropdownMenu setIsShown={setIsShown} parallax={parallax} />
-                    }
-                    <h2>Custom Web Development and Tech Consulting</h2>
+                    <Image id='de-logo' src={Logo} />
                 </header> 
                 :
                 <header id='main-hover-menu'>
-                    <DropdownMenu parallax={parallax} />
                     <Container>
-                            <Image id='de-logo' src={Logo} />
-                            <h2>Custom Web Development and Tech Consulting</h2>
+                        <Image id='de-logo' src={Logo} />
                     </Container>
                 </header>
             }

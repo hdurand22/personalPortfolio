@@ -43,10 +43,10 @@ const Portfolio = ({ parallax }) => {
             <Row>
               <ProjectImageCarousel className='mobile-carousel' projectCarouselImages={projectCarouselImages} />
             </Row>
-              <h4 className='section-text'>Check out some of my past and present clients!</h4>
+              <h4 className='section-text'>Check out some of our past and present clients!</h4>
               <ProjectLogoCarousel className='mobile-carousel' projects={projects} />
               <Row>
-                <p className='section-text'>Interested in something a bit more techincal? Check out my <a href='https://github.com/hdurand22'>GitHub page</a>.</p>
+                <p className='section-text'>Interested in something a bit more techincal? Check out our <a href='https://github.com/hdurand22'>GitHub page</a>.</p>
               </Row>
           </ParallaxLayer>
         </>
@@ -64,13 +64,13 @@ const Portfolio = ({ parallax }) => {
             <Row>
               <ProjectImageCarousel projectCarouselImages={projectCarouselImages} />
             </Row>
-            <h5 className='section-text'>Check out some of my past and present clients!</h5>
+            <h5 className='section-text'>Check out some of our past and present clients!</h5>
             <div className='card-holder'>
               {projects.map((project, index) => (
                 <ProjectLogoPopover key={index} project={project} />
               ))}
             </div>
-            <p className='section-text'>Interested in something a bit more techincal? Check out my <a href='https://github.com/hdurand22'>GitHub page</a>.</p>
+            <p className='section-text'>Interested in something a bit more techincal? Check out our <a href='https://github.com/hdurand22'>GitHub page</a>.</p>
           </ParallaxLayer>
         </>
       }

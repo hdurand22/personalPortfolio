@@ -21,6 +21,7 @@ const Contact = ({ parallax }) => {
     const [emailError, setEmailError] = useState(null);
     const [nameError, setNameError] = useState(null);
     const [messageError, setMessageError] = useState(null);
+    const [errorMessage, setErrorMessage] = useState(null);
 
     const isValidName = (name) => {
         if (name.length < 2) {
@@ -80,11 +81,14 @@ const Contact = ({ parallax }) => {
                 email,
                 subject,
                 text: message
-            }).then(setStatus('Submit')).then(setInputs({
+            }).then(setStatus('Submitted')).then(setInputs({
                 email: '',
                 name: '',
                 message: ''
-            }));
+            })).catch((error) => {
+                console.error(error);
+                setErrorMessage("Sorry, something went wrong. Please try again later.")
+            });
         }
         return;
     }
@@ -120,25 +124,32 @@ const Contact = ({ parallax }) => {
                             <ContactIcon height={200} />
                         </Col>
                         <Col xxl={6} xl={6} lg={7} md={11} sm={11} xs={10} className='section-text'>
-                            <Form id='email-form' onSubmit={handleSubmit}>
-                                <h3>Get in touch with me!</h3>
-                                <FormGroup className='mb-3' controlId='contactName'>
-                                    <Form.Label>Name</Form.Label>
-                                    <FormControl type='text' name='name' placeholder='Enter your name' value={inputs.name} onChange={handleChange} />
-                                    {nameError && <p style={{color: 'red'}}>{nameError}</p>}
-                                </FormGroup>
-                                <FormGroup className='mb-3' controlId='contactEmail'>
-                                    <Form.Label>Email</Form.Label>
-                                    <FormControl type='email' name='email' placeholder='Enter your email address' value={inputs.email} onChange={handleChange} />
-                                    {emailError && <p style={{color: 'red'}}>{emailError}</p>}
-                                </FormGroup>
-                                <FormGroup className='mb-3' controlId='contactMessage'>
-                                    <Form.Label>Message</Form.Label>
-                                    <FormControl as='textarea' name='message' rows={4} value={inputs.message} onChange={handleChange}/>
-                                    {messageError && <p style={{color: 'red'}}>{messageError}</p>}
-                                </FormGroup>
-                                <button type='submit' style={{backgroundColor: "#46F4AC"}}>Submit</button>
-                            </Form>
+                            {status === 'Submitted' && errorMessage === null ? 
+                                <h2>Thanks for reaching out! We'll get back to you soon!</h2>
+                                :
+                                <Form id='email-form' onSubmit={handleSubmit}>
+                                    <h3>Get in touch with me!</h3>
+                                    <FormGroup className='mb-3' controlId='contactName'>
+                                        <Form.Label>Name</Form.Label>
+                                        <FormControl type='text' name='name' placeholder='Enter your name' value={inputs.name} onChange={handleChange} />
+                                        {nameError && <p style={{color: 'red'}}>{nameError}</p>}
+                                    </FormGroup>
+                                    <FormGroup className='mb-3' controlId='contactEmail'>
+                                        <Form.Label>Email</Form.Label>
+                                        <FormControl type='email' name='email' placeholder='Enter your email address' value={inputs.email} onChange={handleChange} />
+                                        {emailError && <p style={{color: 'red'}}>{emailError}</p>}
+                                    </FormGroup>
+                                    <FormGroup className='mb-3' controlId='contactMessage'>
+                                        <Form.Label>Message</Form.Label>
+                                        <FormControl as='textarea' name='message' rows={4} value={inputs.message} onChange={handleChange}/>
+                                        {messageError && <p style={{color: 'red'}}>{messageError}</p>}
+                                    </FormGroup>
+                                    <button type='submit' style={{backgroundColor: "#E47C5B", borderRadius: "10%", border: "1px solid"}}>Submit</button>
+                                </Form>
+                            }
+                            {errorMessage !== null &&
+                                <h2>{errorMessage}</h2>
+                            }
                         </Col>
                     </Row>
                 </ParallaxLayer>
@@ -159,29 +170,32 @@ const Contact = ({ parallax }) => {
                             <ContactIcon />
                         </Col>
                         <Col xxl={6} xl={6} lg={7} md={11} sm={11} xs={10} className='section-text'>
-                            {/* {status === 'Submit' ? 
-                            
-                            
-                            } */}
-                            <Form id='email-form' onSubmit={handleSubmit}>
-                                <h3>Get in touch with me!</h3>
-                                <FormGroup className='mb-3' controlId='contactName'>
-                                    <Form.Label>Name</Form.Label>
-                                    <FormControl type='text' name='name' placeholder='Enter your name' value={inputs.name} onChange={handleChange} />
-                                    {nameError && <p style={{color: 'red'}}>{nameError}</p>}
-                                </FormGroup>
-                                <FormGroup className='mb-3' controlId='contactEmail'>
-                                    <Form.Label>Email</Form.Label>
-                                    <FormControl type='email' name='email' placeholder='Enter your email address' value={inputs.email} onChange={handleChange} />
-                                    {emailError && <p style={{color: 'red'}}>{emailError}</p>}
-                                </FormGroup>
-                                <FormGroup className='mb-3' controlId='contactMessage'>
-                                    <Form.Label>Message</Form.Label>
-                                    <FormControl as='textarea' name='message' rows={4} value={inputs.message} onChange={handleChange}/>
-                                    {messageError && <p style={{color: 'red'}}>{messageError}</p>}
-                                </FormGroup>
-                                <button type='submit' style={{backgroundColor: "#E47C5B", borderRadius: "10%", border: "1px solid"}}>Submit</button>
-                            </Form>
+                            {status === 'Submitted' && errorMessage === null ? 
+                                <h2>Thanks for reaching out! We'll get back to you soon!</h2>
+                                :
+                                <Form id='email-form' onSubmit={handleSubmit}>
+                                    <h3>Get in touch with me!</h3>
+                                    <FormGroup className='mb-3' controlId='contactName'>
+                                        <Form.Label>Name</Form.Label>
+                                        <FormControl type='text' name='name' placeholder='Enter your name' value={inputs.name} onChange={handleChange} />
+                                        {nameError && <p style={{color: 'red'}}>{nameError}</p>}
+                                    </FormGroup>
+                                    <FormGroup className='mb-3' controlId='contactEmail'>
+                                        <Form.Label>Email</Form.Label>
+                                        <FormControl type='email' name='email' placeholder='Enter your email address' value={inputs.email} onChange={handleChange} />
+                                        {emailError && <p style={{color: 'red'}}>{emailError}</p>}
+                                    </FormGroup>
+                                    <FormGroup className='mb-3' controlId='contactMessage'>
+                                        <Form.Label>Message</Form.Label>
+                                        <FormControl as='textarea' name='message' rows={4} value={inputs.message} onChange={handleChange}/>
+                                        {messageError && <p style={{color: 'red'}}>{messageError}</p>}
+                                    </FormGroup>
+                                    <button type='submit' style={{backgroundColor: "#E47C5B", borderRadius: "10%", border: "1px solid"}}>Submit</button>
+                                </Form>
+                            }
+                            {errorMessage !== null &&
+                                <h2>{errorMessage}</h2>
+                            }
                         </Col>
                     </Row>
                 </ParallaxLayer>
