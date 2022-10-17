@@ -180,7 +180,7 @@ const Contact = ({ parallax }) => {
                                     <FormControl as='textarea' name='message' rows={4} value={inputs.message} onChange={handleChange}/>
                                     {messageError && <p style={{color: 'red'}}>{messageError}</p>}
                                 </FormGroup>
-                                <button type='submit' style={{backgroundColor: "#46F4AC"}}>Submit</button>
+                                <button type='submit' style={{backgroundColor: "#E47C5B", borderRadius: "10%", border: "1px solid"}}>Submit</button>
                             </Form>
                         </Col>
                     </Row>

@@ -5,7 +5,7 @@ import Logo from '../assets/DE_Logo_expanded.png';
 import { ScreenSizeContext } from '../App';
 
 
-const Heading = ({parallax}) => {
+const Heading = ({parallax }) => {
     const [isShown, setIsShown] = useState(true);
     const { isTabletOrMobile } = useContext(ScreenSizeContext);
 
@@ -31,14 +31,14 @@ const Heading = ({parallax}) => {
                     {isShown &&
                         <DropdownMenu setIsShown={setIsShown} parallax={parallax} />
                     }
-                    <h3 id='home-subtitle'>Custom Web Development and Tech Consulting</h3>
+                    <h2>Custom Web Development and Tech Consulting</h2>
                 </header> 
                 :
                 <header id='main-hover-menu'>
                     <DropdownMenu parallax={parallax} />
                     <Container>
-                        <Image src={Logo} />
-                        <h3 id='home-subtitle'>Custom Web Development and Tech Consulting</h3>
+                            <Image id='de-logo' src={Logo} />
+                            <h2>Custom Web Development and Tech Consulting</h2>
                     </Container>
                 </header>
             }

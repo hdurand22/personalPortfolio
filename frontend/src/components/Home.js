@@ -1,41 +1,28 @@
-import React, { useState } from 'react';
-import { Fade } from 'react-reveal';
+import React, { useEffect, useState } from 'react';
+import { animated, useSpring } from 'react-spring';
 import { ParallaxLayer } from '@react-spring/parallax';
-import { TransitionGroup } from 'react-transition-group';
 import Heading from './Heading';
-import HomeIcon from './HomeIcon';
 
 const Home = ({ parallax }) => {
     
     const [toggle, setToggle] = useState(false);
+
+    useEffect(() => {
+        setToggle(true);
+    }, []);
+
+    const logoSpring = useSpring({
+        transform: toggle ? `translate3d(0px, 0px, 0px)` : `translate3d(400px, 0px, 0px)`,
+        opacity: toggle ? 1 : 0,
+        delay: 500
+    })
     
     return (
-        <div id='home'>
-            <TransitionGroup id='home-screen'>
-                <Fade
-                    right
-                    appear={true}
-                    delay={1250}
-                    duration={1000}
-                    timeout={1000}
-                >
-                    <Heading parallax={parallax} />
-                </Fade>
-            </TransitionGroup>
-            <Fade
-                left
-                appear={true}
-                duration={1250}
-                wait={1250}
-                onReveal={() => setToggle(true)}
-            >
-                <ParallaxLayer className='layer' offset={0} speed={0.8}>
-                    <div className='image-flex'>
-                        <HomeIcon toggle={toggle} />
-                    </div>
-                </ParallaxLayer>
-            </Fade>
-        </div>
+        <animated.div style={logoSpring} id='home'>
+            <ParallaxLayer className='layer' offset={0} speed={0.8}>
+                <Heading parallax={parallax} />
+            </ParallaxLayer>
+        </animated.div>
     )
 
 
