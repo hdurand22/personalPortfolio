@@ -456,6 +456,9 @@
 
       .container {
         padding: 0 2em 0 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
     /* Header */
@@ -464,20 +467,10 @@
         width: 20%;
       }
 
-      #main-hover-menu {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-      }
-
       #responsive-navbar-nav {
         padding: 5px;
         margin-top: 5px;
         background: none;
-      }
-
-      #dropdown-nav-mobile {
-        flex-wrap: nowrap;
       }
 
       .me-auto.navbar-nav {
@@ -492,12 +485,13 @@
         margin: 5px;
       }
 
-      .navbar {
-        flex-wrap: nowrap !important;
-      } 
-
       .section-header {
         margin-bottom: 10px;
+      }
+
+      #de-logo {
+        width: auto;
+        height: 50vh;
       }
     
     /* Image */
@@ -572,15 +566,6 @@
         margin-top: 5px;
       }
 
-      #dropdown-nav-mobile {
-        flex-wrap: nowrap;
-      }
-
-      .navbar-collapse, .collapse, .show {
-        flex: 1;
-        margin-left: 10px;
-      }
-
       button {
         margin: 5px;
         padding: 2px;
@@ -590,6 +575,17 @@
         flex-wrap: nowrap !important;
         background: none;
       } 
+
+      #de-logo {
+        width: auto;
+        height: 33vh;
+      }
+
+      .container {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
 
 
       /* Section */
@@ -682,19 +678,10 @@
         background: none;
       }
 
-      #dropdown-nav-mobile {
-        flex-wrap: nowrap;
-      }
-
       .navbar {
         flex-wrap: nowrap !important;
         background: none;
       } 
-
-      .navbar-collapse, .collapse, .show {
-        flex: 1;
-        margin-left: 10px;
-      }
 
       button {
         margin: 5px;
@@ -765,15 +752,6 @@
         padding: 5px;
         margin: 5px;
         background: none !important;
-      }
-
-      #dropdown-nav-mobile {
-        flex-wrap: nowrap;
-      }
-
-      .navbar-collapse, .collapse, .show {
-        flex: 1;
-        margin-left: 10px;
       }
 
       .navbar {
@@ -893,15 +871,6 @@
         background: none;
       }
 
-      #dropdown-nav-mobile {
-        flex-wrap: nowrap;
-      }
-
-      .navbar-collapse, .collapse, .show {
-        flex: 1;
-        margin-left: 10px;
-      }
-
       button {
         margin: 5px;
         padding: 2px;
@@ -932,7 +901,7 @@
     }
 
     .project-circle {
-      width: auto;
+      width: calc(25% + 10px);
     }
 
     .slide {

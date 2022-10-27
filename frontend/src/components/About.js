@@ -46,13 +46,6 @@ const About = ({ parallax }) => {
                     <>
                       <h4>Looking to get online and build your brand? Want a cool new feature for your already awesome website? No matter what stage your business is at, Durand Enterprises has got you covered.</h4>
                       <br/>
-                    </>
-                  }
-                  {readMore ? <h5 onClick={() => setReadMore(!readMore)}>Read Less...</h5> : <h5 onClick={() => setReadMore(!readMore)}>Read More...</h5> }
-                  {readMore && 
-                    <>
-                      <p>Durand Enterprises was started to give Hayden Durand - founder, owner, and sole employee - the opportunity to work with a wide variety of clients and help them bring their visions to life. Hayden specializes in full-stack web development and design, as well as digital marketing, including email marketing, social advertising, and search engine optimization. Through meticulous planning, thoughtful design, and innovative development, Hayden delivers high-quality websites and web applications to every client on his roster.</p>
-                      <p>Hayden’s philosophy is to utilize everything at his disposal and not reinvent the wheel. He is a passionate and seasoned JavaScript developer who loves to create custom solutions when the need arises, but he also recognizes that web content management systems, like WordPress, will often meet his clients’ objectives. Regardless of the project, Hayden will work with his clients to determine the ideal approach and mix of technologies for success.</p>
                       <h5>Technologies We Use:</h5>
                       <ul>
                         <li>JavaScript</li>
@@ -64,6 +57,13 @@ const About = ({ parallax }) => {
                         <li>SQL</li>
                       </ul>
                     </>
+                  }
+                  {readMore ? <h5 onClick={() => setReadMore(!readMore)}>Read Less...</h5> : <h5 onClick={() => setReadMore(!readMore)}>Read More...</h5> }
+                  {readMore && 
+                    <div>
+                      <p>Durand Enterprises was started to give Hayden Durand - founder, owner, and sole employee - the opportunity to work with a wide variety of clients and help them bring their visions to life. Hayden specializes in full-stack web development and design, as well as digital marketing, including email marketing, social advertising, and search engine optimization. Through meticulous planning, thoughtful design, and innovative development, Hayden delivers high-quality websites and web applications to every client on his roster.</p>
+                      <p>Hayden’s philosophy is to utilize everything at his disposal and not reinvent the wheel. He is a passionate and seasoned JavaScript developer who loves to create custom solutions when the need arises, but he also recognizes that web content management systems, like WordPress, will often meet his clients’ objectives. Regardless of the project, Hayden will work with his clients to determine the ideal approach and mix of technologies for success.</p>
+                    </div>
                   }
                 </Col>
               </Row>
