@@ -35,10 +35,10 @@ const Breadcrumbs = ({ setIsShown, parallax }) => {
                 <Navbar.Toggle aria-controls='responsive-navbar-nav' onClick={() => expanded ? setExpanded(false) : setExpanded(true)} />
                 <Navbar.Collapse id='responsive-navbar-nav'>
                     <Nav className='me-auto'>
-                            <h3 className='nav-option' onClick={() => handleSelect(0)}>Home</h3>
-                            <h3 className='nav-option' onClick={() => handleSelect(1)}>Our Work</h3>
-                            <h3 className='nav-option' onClick={() => handleSelect(2)}>About Us</h3>
-                            <h3 className='nav-option' onClick={() => handleSelect(3)}>Contact</h3>
+                            <h3 onClick={() => handleSelect(0)}>Home</h3>
+                            <h3 onClick={() => handleSelect(1)}>Our Work</h3>
+                            <h3 onClick={() => handleSelect(2)}>About Us</h3>
+                            <h3 onClick={() => handleSelect(3)}>Contact</h3>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>   

@@ -262,6 +262,7 @@
 
   .nav-option {
     background: none;
+    font-family: QanelasSoftUltraLight;
   }
 
   .navbar {
@@ -464,7 +465,7 @@
     /* Header */
 
       header {
-        width: 20%;
+        width: 100%;
       }
 
       #responsive-navbar-nav {
@@ -486,6 +487,10 @@
       }
 
       .section-header {
+        display: flex;
+        width: 20vw;
+        align-items: center;
+        justify-content: space-between;
         margin-bottom: 10px;
       }
 
@@ -590,14 +595,11 @@
 
       /* Section */
 
-      nav {
-        margin-left: 10px;
-      }
-      
       .section-header {
         display: flex;
-        width: 100%;
+        width: 28vw;
         align-items: center;
+        justify-content: space-between;
         margin-bottom: 10px;
       }
 
@@ -692,8 +694,9 @@
 
       .section-header {
         display: flex;
-        width: 100%;
+        width: 50vw;
         align-items: center;
+        justify-content: space-between;
         margin-bottom: 10px;
       }
 
@@ -775,8 +778,9 @@
 
     .section-header {
       display: flex;
-      width: 100%;
+      width: 50vw;
       align-items: center;
+      justify-content: space-between;
       margin-bottom: 10px;
       background: none;
     }
@@ -788,6 +792,10 @@
     .section-text {
       width: 100%;
       padding: 5px;
+    }
+
+    .section-content {
+      padding: 0px;
     }
     
     #email-form > h3{
@@ -884,8 +892,9 @@
 
     .section-header {
       display: flex;
-      width: 100%;
+      width: 36vw;
       align-items: center;
+      justify-content: space-between;
       margin-bottom: 10px;
       background: none;
     }
@@ -920,4 +929,17 @@
     
   }
 
+  @media screen and (max-width: 280px)  {
+    p {
+      font-size: 14px;
+    }
 
+    .section-header {
+      display: flex;
+      width: 46vw;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      background: none;
+    }
+  }

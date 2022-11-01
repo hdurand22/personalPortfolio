@@ -87,7 +87,7 @@ const Contact = ({ parallax }) => {
                 message: ''
             })).catch((error) => {
                 console.error(error);
-                setErrorMessage("Sorry, something went wrong. Please try again later.")
+                setErrorMessage("Sorry, something went wrong. Please try again later or email us at hayden@durandenterprises.com.")
             });
         }
         return;
@@ -114,8 +114,8 @@ const Contact = ({ parallax }) => {
             <>
                 <ParallaxLayer className='layer' offset={3} speed={0.6} style={{ zIndex: 5, height: '4px' }}>
                     <div className='section-header' id='contact'>
-                        <h1>Contact</h1>
                         <Breadcrumbs parallax={ref} />   
+                        <h1 className='section-title'>Contact</h1>
                     </div>
                 </ParallaxLayer>
                 <ParallaxLayer className='layer' offset={3.2} speed={0.8}>
@@ -132,17 +132,17 @@ const Contact = ({ parallax }) => {
                                     <FormGroup className='mb-3' controlId='contactName'>
                                         <Form.Label>Name</Form.Label>
                                         <FormControl type='text' name='name' placeholder='Enter your name' value={inputs.name} onChange={handleChange} />
-                                        {nameError && <p style={{color: 'red'}}>{nameError}</p>}
+                                        {nameError && <p style={{color: 'red', fontSize: '10px'}}>{nameError}</p>}
                                     </FormGroup>
                                     <FormGroup className='mb-3' controlId='contactEmail'>
                                         <Form.Label>Email</Form.Label>
                                         <FormControl type='email' name='email' placeholder='Enter your email address' value={inputs.email} onChange={handleChange} />
-                                        {emailError && <p style={{color: 'red'}}>{emailError}</p>}
+                                        {emailError && <p style={{color: 'red', fontSize: '10px'}}>{emailError}</p>}
                                     </FormGroup>
                                     <FormGroup className='mb-3' controlId='contactMessage'>
                                         <Form.Label>Message</Form.Label>
-                                        <FormControl as='textarea' name='message' rows={4} value={inputs.message} onChange={handleChange}/>
-                                        {messageError && <p style={{color: 'red'}}>{messageError}</p>}
+                                        <FormControl as='textarea' name='message' rows={3} value={inputs.message} onChange={handleChange}/>
+                                        {messageError && <p style={{color: 'red', fontSize: '10px'}}>{messageError}</p>}
                                     </FormGroup>
                                     <button type='submit' style={{backgroundColor: "#E47C5B", borderRadius: "10%", border: "1px solid"}}>Submit</button>
                                 </Form>

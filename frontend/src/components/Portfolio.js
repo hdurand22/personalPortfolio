@@ -35,8 +35,8 @@ const Portfolio = ({ parallax }) => {
         <>
           <ParallaxLayer className='layer' offset={1} speed={0.6} style={{ zIndex: 2, height: '4px' }}>
             <div className='section-header' id='portfolio'>  
-              <h1>Our Work</h1>
               <Breadcrumbs parallax={ref} />
+              <h1 className='section-title'>Our Work</h1>
             </div>
           </ParallaxLayer>
           <ParallaxLayer offset={1.15} speed={0.8}>
