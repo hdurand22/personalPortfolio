@@ -1,9 +1,25 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import nodemailer from 'nodemailer';
+const functions = require("firebase-functions");
+const express = require('express');
+const sendToMeRouter = express();
+const dotenv = require('dotenv');
+const cors = require('cors');
+const morgan = require('morgan');
+const nodemailer = require('nodemailer');
 
-const sendToMeRouter = express.Router();
 dotenv.config();
+sendToMeRouter.use(morgan('dev'));
+
+sendToMeRouter.use(cors());
+sendToMeRouter.use(express.json());
+sendToMeRouter.get('/', (req, res) => {
+    console.log(req);
+    res.send('Index route running');
+})
+sendToMeRouter.get('/sendtome', (req, res) => {
+    console.log(`sendtome req: ${req}`);
+    res.send('API is running');
+});
+// sendToMeRouter.use('/sendtome', sendToMeRouter);
 
 const transport = {
     host: 'smtp.office365.com',
@@ -28,7 +44,7 @@ const transporter = nodemailer.createTransport(transport);
         }
     });
 
-sendToMeRouter.post('/', (req, res, next) => {
+sendToMeRouter.post('/sendtome', (req, res, next) => {
     const mail = {
         from: process.env.USER_EMAIL,
         to: 'hayden@durandenterprises.com',
@@ -49,4 +65,7 @@ sendToMeRouter.post('/', (req, res, next) => {
     })
 });
 
-export default sendToMeRouter;
+// const port = process.env.PORT || 5000;
+// sendToMeRouter.listen(port, console.log(`Server running in ${process.env.NODE_ENV} mode on Port ${port}`));
+
+exports.api = functions.https.onRequest(sendToMeRouter);

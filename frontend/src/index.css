@@ -498,6 +498,12 @@
         width: auto;
         height: 50vh;
       }
+
+      .section-text {
+        width: 100%;
+        padding: 8px;
+        margin: 10px;
+      }
     
     /* Image */
 
@@ -558,6 +564,7 @@
       .section-content {
         justify-content: center;
         align-content: center;
+        padding: 10px;
       }
 
     /* Header */
@@ -601,6 +608,11 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 10px;
+      }
+
+      .section-text {
+        width: 100%;
+        margin: 10px;
       }
 
       .nav-mobile {
@@ -700,6 +712,12 @@
         margin-bottom: 10px;
       }
 
+      .section-text {
+        width: 100%;
+        padding: 8px;
+        margin: 10px;
+      }
+
       .section-image {
         object-fit: scale-down;
         margin: 0px 0px 10px 0px;
@@ -791,7 +809,8 @@
 
     .section-text {
       width: 100%;
-      padding: 5px;
+      padding: 8px;
+      margin: 10px;
     }
     
     #email-form > h3{
@@ -901,8 +920,8 @@
 
     .section-text {
       width: 100%;
-      padding: 5px;
-      margin: 5px;
+      padding: 8px;
+      margin: 10px;
     }
 
     .project-circle {
@@ -938,4 +957,11 @@
       margin-bottom: 10px;
       background: none;
     }
+
+    .section-text {
+      width: 100%;
+      padding: 8px;
+      margin: 10px;
+    }
+
   }

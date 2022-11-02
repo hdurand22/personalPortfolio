@@ -45,9 +45,7 @@ const Portfolio = ({ parallax }) => {
             </Row>
               <h4 className='section-text'>Check out some of our past and present clients!</h4>
               <ProjectLogoCarousel className='mobile-carousel' projects={projects} />
-              <Row>
                 <p className='section-text'>Interested in something a bit more techincal? Check out our <a href='https://github.com/hdurand22'>GitHub page</a>.</p>
-              </Row>
           </ParallaxLayer>
         </>
         :

@@ -59,6 +59,18 @@ const Contact = ({ parallax }) => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
+        
+        // Real-time check for errors to erase error message
+        if (name === 'name') {
+            isValidName(value);
+        }
+        if (name === 'email') {
+            isValidEmail(value);
+        }
+        if (name === 'message') {
+            isValidMessage(value);
+        }
+
         setInputs((prev) => {
             return {
                 ...prev,
@@ -87,7 +99,7 @@ const Contact = ({ parallax }) => {
                 message: ''
             })).catch((error) => {
                 console.error(error);
-                setErrorMessage("Sorry, something went wrong. Please try again later or email us at hayden@durandenterprises.com.")
+                setErrorMessage("Sorry, something went wrong. Please email us at hayden@durandenterprises.com.")
             });
         }
         return;
@@ -123,10 +135,8 @@ const Contact = ({ parallax }) => {
                         <Col xxl={4} xl={4} lg={4} md={5} sm={7} xs={7} className='section-image'>
                             <ContactIcon height={200} />
                         </Col>
-                        <Col xxl={6} xl={6} lg={7} md={11} sm={11} xs={10} className='section-text'>
-                            {status === 'Submitted' && errorMessage === null ? 
-                                <h2>Thanks for reaching out! We'll get back to you soon!</h2>
-                                :
+                        <Col xxl={6} xl={6} lg={7} md={11} sm={11} className='section-text'>
+                            {status !== 'Submitted' &&
                                 <Form id='email-form' onSubmit={handleSubmit}>
                                     <h3>Get in touch with me!</h3>
                                     <FormGroup className='mb-3' controlId='contactName'>
@@ -147,8 +157,10 @@ const Contact = ({ parallax }) => {
                                     <button type='submit' style={{backgroundColor: "#E47C5B", borderRadius: "10%", border: "1px solid"}}>Submit</button>
                                 </Form>
                             }
-                            {errorMessage !== null &&
-                                <h2>{errorMessage}</h2>
+                            {status === 'Submitted' && errorMessage === null ?
+                                <h3>Thanks for reaching out! We'll get back to you soon!</h3>
+                            :
+                                <h3>{errorMessage}</h3>
                             }
                         </Col>
                     </Row>
@@ -170,9 +182,7 @@ const Contact = ({ parallax }) => {
                             <ContactIcon />
                         </Col>
                         <Col xxl={6} xl={6} lg={7} md={11} sm={11} xs={10} className='section-text'>
-                            {status === 'Submitted' && errorMessage === null ? 
-                                <h2>Thanks for reaching out! We'll get back to you soon!</h2>
-                                :
+                            {status !== 'Submitted' &&
                                 <Form id='email-form' onSubmit={handleSubmit}>
                                     <h3>Get in touch with me!</h3>
                                     <FormGroup className='mb-3' controlId='contactName'>
@@ -187,14 +197,16 @@ const Contact = ({ parallax }) => {
                                     </FormGroup>
                                     <FormGroup className='mb-3' controlId='contactMessage'>
                                         <Form.Label>Message</Form.Label>
-                                        <FormControl as='textarea' name='message' rows={4} value={inputs.message} onChange={handleChange}/>
+                                        <FormControl as='textarea' name='message' rows={3} value={inputs.message} onChange={handleChange}/>
                                         {messageError && <p style={{color: 'red'}}>{messageError}</p>}
                                     </FormGroup>
                                     <button type='submit' style={{backgroundColor: "#E47C5B", borderRadius: "10%", border: "1px solid"}}>Submit</button>
                                 </Form>
                             }
-                            {errorMessage !== null &&
-                                <h2>{errorMessage}</h2>
+                            {status === 'Submitted' && errorMessage === null ?
+                                <h3>Thanks for reaching out! We'll get back to you soon!</h3>
+                            :
+                                <h3>{errorMessage}</h3>
                             }
                         </Col>
                     </Row>
