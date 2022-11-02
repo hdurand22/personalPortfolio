@@ -138,7 +138,7 @@ const Contact = ({ parallax }) => {
                         <Col xxl={6} xl={6} lg={7} md={11} sm={11} className='section-text'>
                             {status !== 'Submitted' &&
                                 <Form id='email-form' onSubmit={handleSubmit}>
-                                    <h3>Get in touch with me!</h3>
+                                    <h3>Get in touch with us!</h3>
                                     <FormGroup className='mb-3' controlId='contactName'>
                                         <Form.Label>Name</Form.Label>
                                         <FormControl type='text' name='name' placeholder='Enter your name' value={inputs.name} onChange={handleChange} />
@@ -184,7 +184,7 @@ const Contact = ({ parallax }) => {
                         <Col xxl={6} xl={6} lg={7} md={11} sm={11} xs={10} className='section-text'>
                             {status !== 'Submitted' &&
                                 <Form id='email-form' onSubmit={handleSubmit}>
-                                    <h3>Get in touch with me!</h3>
+                                    <h3>Get in touch with us!</h3>
                                     <FormGroup className='mb-3' controlId='contactName'>
                                         <Form.Label>Name</Form.Label>
                                         <FormControl type='text' name='name' placeholder='Enter your name' value={inputs.name} onChange={handleChange} />
