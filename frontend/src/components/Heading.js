@@ -9,19 +9,19 @@ const Heading = () => {
     const { isTabletOrMobile } = useContext(ScreenSizeContext);
 
     return (
-        <>
+        <div itemScope itemType='https://schema.org/ProfessionalService'>
             { !isTabletOrMobile ?
-                <header id='main-hover-menu'>
-                    <Image id='de-logo' src={Logo} />
+                <header id='main-hover-menu' itemProp='brand'>
+                    <Image id='de-logo' itemProp='logo' src={Logo} />
                 </header> 
                 :
-                <header id='main-hover-menu'>
+                <header id='main-hover-menu' itemProp='brand'>
                     <Container>
-                        <Image id='de-logo' src={Logo} />
+                        <Image id='de-logo' itemProp='logo' src={Logo} />
                     </Container>
                 </header>
             }
-        </>
+        </div>
     );
 };
 

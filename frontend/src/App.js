@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import Home from './components/Home';
 import Portfolio from './components/Portfolio';
 import { useMediaQuery } from 'react-responsive';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Provide app-wide access to screen size
 export const ScreenSizeContext = createContext();
@@ -24,14 +25,16 @@ function App() {
 
 
   return (
-    <ScreenSizeContext.Provider value={value}>
-          <Parallax ref={parallax} pages={4}>
-            <Home parallax={parallax}/>
-            <Portfolio parallax={parallax}/>
-            <About parallax={parallax} />
-            <Contact parallax={parallax} />
-          </Parallax>
-    </ScreenSizeContext.Provider>
+    <HelmetProvider>
+      <ScreenSizeContext.Provider value={value}>
+            <Parallax ref={parallax} pages={4}>
+              <Home parallax={parallax}/>
+              <Portfolio parallax={parallax}/>
+              <About parallax={parallax} />
+              <Contact parallax={parallax} />
+            </Parallax>
+      </ScreenSizeContext.Provider>
+    </HelmetProvider>
   );
 }
 

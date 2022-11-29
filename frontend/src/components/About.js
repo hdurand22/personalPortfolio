@@ -43,8 +43,8 @@ const About = ({ parallax }) => {
                 </Col>
                 <Col xxl={6} xl={10} lg={11} md={11} sm={11} xs={11} className='section-text'>
                   {!readMore && 
-                    <>
-                      <h4>Looking to get online and build your brand? Want a cool new feature for your already awesome website? No matter what stage your business is at, Durand Enterprises has got you covered.</h4>
+                    <div itemScope itemType='https://schema.org/ProfessionalService'>
+                      <h4 itemProp='makesOffer'>Looking to get online and build your brand? Want a cool new feature for your already awesome website? No matter what stage your business is at, Durand Enterprises has got you covered.</h4>
                       <br/>
                       <h5>Technologies We Use:</h5>
                       <ul>
@@ -56,7 +56,7 @@ const About = ({ parallax }) => {
                         <li>MongoDB</li>
                         <li>SQL</li>
                       </ul>
-                    </>
+                    </div>
                   }
                   {readMore ? <h5 onClick={() => setReadMore(!readMore)}>Read Less...</h5> : <h5 onClick={() => setReadMore(!readMore)}>Read More...</h5> }
                   {readMore && 
@@ -84,20 +84,20 @@ const About = ({ parallax }) => {
                 <Col xxl={4} xl={6} md={5} sm={9} xs={9} className='section-image'>
                   <AboutIcon />
                 </Col>
-              <Col xxl={6} xl={10} lg={11} md={11} sm={11} xs={11} className='section-text'>
-                <h4>Looking to get online and build your brand? Want a cool new feature for your already awesome website? No matter what stage your business is at, Durand Enterprises has got you covered.</h4>
+              <Col xxl={6} xl={10} lg={11} md={11} sm={11} xs={11} className='section-text' itemScope itemType='https://schema.org/ProfessionalService'>
+                <h4 itemProp='makesOffer'>Looking to get online and build your brand? Want a cool new feature for your already awesome website? No matter what stage your business is at, Durand Enterprises has got you covered.</h4>
                 <br/>
                 <p>Durand Enterprises was started to give Hayden Durand - founder, owner, and sole employee - the opportunity to work with a wide variety of clients and help them bring their visions to life. Hayden specializes in full-stack web development and design, as well as digital marketing, including email marketing, social advertising, and search engine optimization. Through meticulous planning, thoughtful design, and innovative development, Hayden delivers high-quality websites and web applications to every client on his roster.</p>
                 <p>Hayden’s philosophy is to utilize everything at his disposal and not reinvent the wheel. He is a passionate and seasoned JavaScript developer who loves to create custom solutions when the need arises, but he also recognizes that web content management systems, like WordPress, will often meet his clients’ objectives. Regardless of the project, Hayden will work with his clients to determine the ideal approach and mix of technologies for success.</p>
                 <h5>Technologies We Use:</h5>
-                <ul>
-                  <li>JavaScript</li>
-                  <li>React</li>
-                  <li>WordPress</li>
-                  <li>HTML/CSS</li>
-                  <li>Express</li>
-                  <li>MongoDB</li>
-                  <li>SQL</li>
+                <ul itemScope itemType='https://schema.org/ComputerLanguage'>
+                  <li itemProp='programmingLanguage'>JavaScript</li>
+                  <li itemProp='programmingLanguage'>React</li>
+                  <li itemProp='programmingLanguage'>WordPress</li>
+                  <li itemProp='programmingLanguage'>HTML/CSS</li>
+                  <li itemProp='programmingLanguage'>Express</li>
+                  <li itemProp='programmingLanguage'>MongoDB</li>
+                  <li itemProp='programmingLanguage'>SQL</li>
                 </ul>
               </Col>
             </Row>

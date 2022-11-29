@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import SEO from './SEO';
 import { animated, useSpring } from 'react-spring';
 import { ParallaxLayer } from '@react-spring/parallax';
 import Heading from './Heading';
@@ -32,6 +33,12 @@ const Home = ({ parallax }) => {
     
     return (
         <>
+            <SEO
+                title='Durand Enterprises | Web Development and Tech Consulting'
+                description='A one-stop shop for full-stack web and WordPress development, digital strategy, and technical services for businesses and startups. Get online and grow your business.'
+                name='Durand Enterprises LLC'
+                type='article'
+            />
             <animated.div style={logoSpring} id='home'>
                 <ParallaxLayer className='layer' offset={0} speed={0.8}>
                     <Heading />

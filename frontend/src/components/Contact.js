@@ -130,7 +130,7 @@ const Contact = ({ parallax }) => {
                         <h1 className='section-title'>Contact</h1>
                     </div>
                 </ParallaxLayer>
-                <ParallaxLayer className='layer' offset={3.2} speed={0.8}>
+                <ParallaxLayer className='layer' offset={3.2} speed={0.8} itemScope itemType='https://schema.org/ProfessionalService'>
                     <Row xxl={2} xl={2} lg={2} md={1} sm={1} xs={1} className='section-content'>
                         <Col xxl={4} xl={4} lg={4} md={5} sm={7} xs={7} className='section-image'>
                             <ContactIcon height={200} />
@@ -138,7 +138,7 @@ const Contact = ({ parallax }) => {
                         <Col xxl={6} xl={6} lg={7} md={11} sm={11} className='section-text'>
                             {status !== 'Submitted' &&
                                 <Form id='email-form' onSubmit={handleSubmit}>
-                                    <h3>Get in touch with us!</h3>
+                                    <h3 itemProp='contactPoint'>Get in touch with us!</h3>
                                     <FormGroup className='mb-3' controlId='contactName'>
                                         <Form.Label>Name</Form.Label>
                                         <FormControl type='text' name='name' placeholder='Enter your name' value={inputs.name} onChange={handleChange} />
@@ -176,7 +176,7 @@ const Contact = ({ parallax }) => {
                         }
                     </div>
                 </ParallaxLayer>
-                <ParallaxLayer offset={3.2} speed={0.8}>
+                <ParallaxLayer offset={3.2} speed={0.8} itemScope itemType='https://schema.org/ProfessionalService'>
                     <Row xxl={2} xl={2} lg={2} md={1} sm={1} xs={1} className='section-content'>
                         <Col xxl={4} xl={4} lg={4} md={5} sm={7} xs={7} className='section-image'>
                             <ContactIcon />
@@ -184,7 +184,7 @@ const Contact = ({ parallax }) => {
                         <Col xxl={6} xl={6} lg={7} md={11} sm={11} xs={10} className='section-text'>
                             {status !== 'Submitted' &&
                                 <Form id='email-form' onSubmit={handleSubmit}>
-                                    <h3>Get in touch with us!</h3>
+                                    <h3 itemProp='contactPoint'>Get in touch with us!</h3>
                                     <FormGroup className='mb-3' controlId='contactName'>
                                         <Form.Label>Name</Form.Label>
                                         <FormControl type='text' name='name' placeholder='Enter your name' value={inputs.name} onChange={handleChange} />
