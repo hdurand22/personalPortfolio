@@ -64,6 +64,6 @@ sendToMeRouter.post('/sendtome', (req, res, next) => {
 });
 
 const port = process.env.PORT || 5000;
-sendToMeRouter.listen(port, console.log(`Server running in ${process.env.NODE_ENV} mode on Port ${port}`));
+sendToMeRouter.listen(port);
 
 exports.api = functions.https.onRequest(sendToMeRouter);

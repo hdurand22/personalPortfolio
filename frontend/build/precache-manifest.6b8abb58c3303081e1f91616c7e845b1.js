@@ -32,16 +32,16 @@ self.__precacheManifest = [
     "url": "/static/media/QanelasSoftMedium.9d1db155.woff"
   },
   {
+    "revision": "7e289cd5aa1905f89c329ea25e74fa52",
+    "url": "/static/media/QanelasSoftUltraLight.7e289cd5.otf"
+  },
+  {
     "revision": "396e6a5ef203042c516ad8898b3ce617",
     "url": "/static/media/QanelasSoftExtraBold.396e6a5e.otf"
   },
   {
     "revision": "5c383f2ef686f548d31e1eb5a441fb38",
     "url": "/static/media/QanelasSoftRegular.5c383f2e.woff"
-  },
-  {
-    "revision": "7e289cd5aa1905f89c329ea25e74fa52",
-    "url": "/static/media/QanelasSoftUltraLight.7e289cd5.otf"
   },
   {
     "revision": "dc7f67aaf24c750f25079250ddddcace",
