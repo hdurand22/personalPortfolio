@@ -63,7 +63,7 @@ sendToMeRouter.post('/sendtome', (req, res, next) => {
     })
 });
 
-const port = process.env.PORT || 5000;
+const port = process.env.DEV_PORT || 5000;
 sendToMeRouter.listen(port);
 
 exports.api = functions.https.onRequest(sendToMeRouter);
