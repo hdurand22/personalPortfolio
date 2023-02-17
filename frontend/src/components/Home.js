@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import SEO from './SEO';
-import { animated, useSpring } from 'react-spring';
+import { animated, useSpring, useSprings } from 'react-spring';
 import { ParallaxLayer } from '@react-spring/parallax';
+import { ScreenSizeContext } from '../App';
 import Heading from './Heading';
 import DropdownMenu from './DropdownMenu';
 
 const Home = ({ parallax }) => {
     
     const [toggle, setToggle] = useState(false);
+    const { isTabletOrMobile } = useContext(ScreenSizeContext);
 
     useEffect(() => {
         setToggle(true);
@@ -30,6 +32,26 @@ const Home = ({ parallax }) => {
         opacity: toggle ? 1 : 0,
         delay: 1750
     })
+
+
+    // const [mobileButtonSpring, api] = useSprings(2, () => ({
+    //     [
+    //         {    
+    //             from: {opacity: 0},
+    //             to: {opacity: 1},
+    //             delay: 3000
+            
+    //         },
+    //         { 
+    //             loop: true,
+    //             from: {scale: 1},
+    //             to: [
+    //                 {scale: 0.75},
+    //                 {scale: 1},
+    //             ],
+    //         },
+    //     ]   
+    // }))
     
     return (
         <>
@@ -48,6 +70,13 @@ const Home = ({ parallax }) => {
                     <animated.div style={menuSpring}>
                         <DropdownMenu parallax={parallax} />
                     </animated.div>
+                    {/* // {isTabletOrMobile &&
+                    //     <animated.div>
+                    //         {transitions((style, item) => (
+                    //             {item}
+                    //         ))}
+                    //     </animated.div>
+                    // } */}
                 </ParallaxLayer>
             </animated.div>
         </>
