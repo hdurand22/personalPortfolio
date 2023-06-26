@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "ad7533f9f1a9cc87a720",
+    "revision": "7d4a8c7ca1ef1278c971",
     "url": "/static/css/main.e354573d.chunk.css"
   },
   {
-    "revision": "ad7533f9f1a9cc87a720",
-    "url": "/static/js/main.666f81a7.chunk.js"
+    "revision": "7d4a8c7ca1ef1278c971",
+    "url": "/static/js/main.4bc4d4e9.chunk.js"
   },
   {
     "revision": "627c8e34daa6eed17cf0",
@@ -28,20 +28,20 @@ self.__precacheManifest = [
     "url": "/static/media/DE_Logo_expanded.df3959df.png"
   },
   {
-    "revision": "5c383f2ef686f548d31e1eb5a441fb38",
-    "url": "/static/media/QanelasSoftRegular.5c383f2e.woff"
-  },
-  {
-    "revision": "7e289cd5aa1905f89c329ea25e74fa52",
-    "url": "/static/media/QanelasSoftUltraLight.7e289cd5.otf"
-  },
-  {
     "revision": "396e6a5ef203042c516ad8898b3ce617",
     "url": "/static/media/QanelasSoftExtraBold.396e6a5e.otf"
   },
   {
+    "revision": "5c383f2ef686f548d31e1eb5a441fb38",
+    "url": "/static/media/QanelasSoftRegular.5c383f2e.woff"
+  },
+  {
     "revision": "9d1db1551774f111ea100c1f53679fc4",
     "url": "/static/media/QanelasSoftMedium.9d1db155.woff"
+  },
+  {
+    "revision": "7e289cd5aa1905f89c329ea25e74fa52",
+    "url": "/static/media/QanelasSoftUltraLight.7e289cd5.otf"
   },
   {
     "revision": "dc7f67aaf24c750f25079250ddddcace",
@@ -96,7 +96,7 @@ self.__precacheManifest = [
     "url": "/static/media/eCommerceCheckoutScreen.8f65512b.png"
   },
   {
-    "revision": "469d3b003ac7f53dc8043318834a2dfd",
+    "revision": "c4c95c6f2b3120f0f0f0bdd94942bc9f",
     "url": "/index.html"
   }
 ];

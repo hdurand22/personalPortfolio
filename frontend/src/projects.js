@@ -3,7 +3,7 @@ const projects = [
         title: 'LBRTE',
         description: 'We built this WordPress site with extensive customizations to the theme and styling. We also maintain the CRM, manage hosting, and provide tech support.',
         image: require('./assets/lbrte-logo.png'),
-        siteLink: 'https://www.lbrteus.com/'
+        siteLink: 'https://staging3.lbrtecannabisco.com/'
     },
     {
         title: 'RidingEasy Records',
