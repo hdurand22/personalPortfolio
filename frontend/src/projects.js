@@ -6,6 +6,12 @@ const projects = [
         siteLink: 'https://staging3.lbrtecannabisco.com/'
     },
     {
+        title: 'Finance App',
+        description: 'We built this responsive full-stack application for displaying vital business KPIs and data, and it utilizes machine learning for predictive analytics. It\'s an easily modifiable and scalable platform designed to suit your business\'s branding and reporting needs.',
+        image: require('./assets/finance-app.png'),
+        siteLink: 'https://financeapp-ebon.vercel.app/'
+    },
+    {
         title: 'RidingEasy Records',
         description: 'We maintain this WordPress eCommerce site and marketing CRM and manage domain and hosting services. We also provide custom theme modifications and JavaScript for integrations between the site and CRM to improve digital marketing performance.',
         image: require('./assets/ridingeasy-logo.png'),
@@ -30,16 +36,16 @@ const projects = [
         siteLink: 'https://immigrationgames.com/'
     },
     {
-        title: 'Personal Website - Dr. Alexandra To',
-        description: 'We converted Dr. To\'s site from an HTML page to a React single-page application and accommodated her existing HTML theme and styling. This site is deployed using GitHub Pages.',
-        image: require('./assets/NEU-logo.png'),
-        siteLink: 'https://www.alexandrato.com/'
-    },
-    {
         title: 'Three Corgis',
         description: 'We maintain this WordPress eCommerce site and marketing CRM and manage domain and hosting services. We also provide custom theme modifications and JavaScript for integrations between the site and CRM to improve digital marketing performance.',
         image: require('./assets/threecorgis-logo.jpeg'),
         siteLink: 'https://www.threecorgis.com/'
+    },
+    {
+        title: 'Personal Website - Dr. Alexandra To',
+        description: 'We converted Dr. To\'s site from an HTML page to a React single-page application and accommodated her existing HTML theme and styling. This site is deployed using GitHub Pages.',
+        image: require('./assets/NEU-logo.png'),
+        siteLink: 'https://www.alexandrato.com/'
     },
     {
         title: 'Personal Website - Yesenia Cisneros',
