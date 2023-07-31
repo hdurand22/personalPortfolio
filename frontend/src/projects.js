@@ -1,7 +1,19 @@
 const projects = [
     {
+        title: 'Reigning Phoenix Music',
+        description: 'We built this WordPress site with extensive customizations to the theme and styling. We also maintain the CRM and execute digital marketing campaigns, as well as provide tech support.',
+        image: require('./assets/rpm-logo.png'),
+        siteLink: 'https://reigningphoenixmusic.com/'
+    },
+    {
+        title: 'Deicide',
+        description: 'We built this WordPress site with extensive customizations to the theme and styling. We also maintain the CRM and execute digital marketing campaigns, as well as provide tech support.',
+        image: require('./assets/deicide-logo.png'),
+        siteLink: 'https://deicideofficial.com/'
+    },
+    {
         title: 'LBRTE',
-        description: 'We built this WordPress site with extensive customizations to the theme and styling. We also maintain the CRM, manage hosting, and provide tech support.',
+        description: 'We built this WordPress site with extensive customizations to the theme and styling.',
         image: require('./assets/lbrte-logo.png'),
         siteLink: 'https://staging3.lbrtecannabisco.com/'
     },
@@ -23,12 +35,12 @@ const projects = [
         image: require('./assets/blue-dot-sessions-logo.jpeg'),
         siteLink: 'https://www.sessions.blue/'
     },
-    {
-        title: 'Matters @ Play',
-        description: 'We provided custom theme modifications and extensive styling and design to the Matters @ Play WordPress site.',
-        image: require('./assets/map-logo.png'),
-        siteLink: 'https://mattersatplay.com/'
-    },
+    // {
+    //     title: 'Matters @ Play',
+    //     description: 'We provided custom theme modifications and extensive styling and design to the Matters @ Play WordPress site.',
+    //     image: require('./assets/map-logo.png'),
+    //     siteLink: 'https://mattersatplay.com/'
+    // },
     {
         title: 'DePaul University - Immigration Games',
         description: 'We provided custom theme modifications and plugin integrations to the Immigration Games WordPress site.',
@@ -47,12 +59,12 @@ const projects = [
         image: require('./assets/NEU-logo.png'),
         siteLink: 'https://www.alexandrato.com/'
     },
-    {
-        title: 'Personal Website - Yesenia Cisneros',
-        description: 'We redesigned and customized the theme of Yesenia\'s existing WordPress site.',
-        image: require('./assets/YeseniaLogo_purple_small.png'),
-        siteLink: 'https://www.yeseniac.com/'
-    },
+    // {
+    //     title: 'Personal Website - Yesenia Cisneros',
+    //     description: 'We redesigned and customized the theme of Yesenia\'s existing WordPress site.',
+    //     image: require('./assets/YeseniaLogo_purple_small.png'),
+    //     siteLink: 'https://www.yeseniac.com/'
+    // },
 ]
 
 export default projects

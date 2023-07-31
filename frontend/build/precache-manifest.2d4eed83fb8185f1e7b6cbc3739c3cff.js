@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "7fd9f3bbfa3c76536e2a",
+    "revision": "8ba75f8d71f8eff1fc83",
     "url": "/static/css/main.e354573d.chunk.css"
   },
   {
-    "revision": "7fd9f3bbfa3c76536e2a",
-    "url": "/static/js/main.50052e26.chunk.js"
+    "revision": "8ba75f8d71f8eff1fc83",
+    "url": "/static/js/main.d366bf9c.chunk.js"
   },
   {
     "revision": "8d1b24a60328ef7e83b3",
@@ -28,20 +28,28 @@ self.__precacheManifest = [
     "url": "/static/media/DE_Logo_expanded.df3959df.png"
   },
   {
-    "revision": "9d1db1551774f111ea100c1f53679fc4",
-    "url": "/static/media/QanelasSoftMedium.9d1db155.woff"
+    "revision": "396e6a5ef203042c516ad8898b3ce617",
+    "url": "/static/media/QanelasSoftExtraBold.396e6a5e.otf"
   },
   {
     "revision": "7e289cd5aa1905f89c329ea25e74fa52",
     "url": "/static/media/QanelasSoftUltraLight.7e289cd5.otf"
   },
   {
-    "revision": "396e6a5ef203042c516ad8898b3ce617",
-    "url": "/static/media/QanelasSoftExtraBold.396e6a5e.otf"
+    "revision": "9d1db1551774f111ea100c1f53679fc4",
+    "url": "/static/media/QanelasSoftMedium.9d1db155.woff"
   },
   {
     "revision": "5c383f2ef686f548d31e1eb5a441fb38",
     "url": "/static/media/QanelasSoftRegular.5c383f2e.woff"
+  },
+  {
+    "revision": "dfa0bbac8cf369152d4e4e1ceb2383e6",
+    "url": "/static/media/rpm-logo.dfa0bbac.png"
+  },
+  {
+    "revision": "6d7044b6754eac94622cf569b35d2ceb",
+    "url": "/static/media/deicide-logo.6d7044b6.png"
   },
   {
     "revision": "34f163c80208df4ebe8db6601e3537c0",
@@ -56,10 +64,6 @@ self.__precacheManifest = [
     "url": "/static/media/blue-dot-sessions-logo.c1d6cdbb.jpeg"
   },
   {
-    "revision": "dcac192122e8b521aa357de4762a5927",
-    "url": "/static/media/map-logo.dcac1921.png"
-  },
-  {
     "revision": "55d552fe13510a9c7b917a47678f39d0",
     "url": "/static/media/depaul-university-logo.55d552fe.png"
   },
@@ -70,10 +74,6 @@ self.__precacheManifest = [
   {
     "revision": "63f7ef5447e952b7074dc7ae6ef97a27",
     "url": "/static/media/NEU-logo.63f7ef54.png"
-  },
-  {
-    "revision": "8737673221f582a0d5a2f975e8486419",
-    "url": "/static/media/YeseniaLogo_purple_small.87376732.png"
   },
   {
     "revision": "3e88f6b0f7113c13f3360e0c44715ba5",
@@ -100,7 +100,7 @@ self.__precacheManifest = [
     "url": "/static/media/eCommerceCheckoutScreen.8f65512b.png"
   },
   {
-    "revision": "a3b45e53462e4a4c78d5063ae0c16701",
+    "revision": "6006bc6752760de375740940a91e60a5",
     "url": "/index.html"
   }
 ];
